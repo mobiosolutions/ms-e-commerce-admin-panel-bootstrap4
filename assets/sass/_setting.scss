@@ -1,0 +1,32 @@
+.theme-setting-wrapper{
+    #settings-trigger {
+        position: fixed;
+        top: 50%;
+        @include transform(translate(0,-50%));
+        right: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        z-index: 50000;
+        padding: 0;
+        width: 38px!important;
+        height: 38px!important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        i {
+            font-size: $font-size + 6;;
+            line-height: 1;
+            @include animation(rotate, 0, 3s, linear, infinite);
+        }
+    }
+}
+@include keyframe (rotate) {
+    0% {
+        @include transform(rotate(0deg));
+    }
+
+    100% {
+        @include transform(rotate(360deg));
+    }
+}

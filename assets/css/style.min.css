@@ -1,3 +1,14 @@
+/******************* Transform ***********************/
+/******************* Transition ***********************/
+/******************* Box Shadow ***********************/
+/******************* Text Shadow ***********************/
+/******************* Border Radius ***********************/
+/******************* KeyFrames ***********************/
+/******************* Animation ***********************/
+/*
+    Example usage: 
+    @include animation(rotate, 5s, 10s, linear, infinite)
+ */
 a {
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -1209,6 +1220,100 @@ a.waves-effect.waves-ripple {
     -webkit-transform: translate(0, 0) !important;
     transform: translate(0, 0) !important; }
 
+.theme-setting-wrapper #settings-trigger {
+  position: fixed;
+  top: 50%;
+  -moz-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  z-index: 50000;
+  padding: 0;
+  width: 38px !important;
+  height: 38px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .theme-setting-wrapper #settings-trigger i {
+    font-size: 20px;
+    line-height: 1;
+    -webkit-animation-name: rotate;
+    -webkit-animation-delay: 0;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-name: rotate;
+    -moz-animation-delay: 0;
+    -moz-animation-duration: 3s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+    -o-animation-name: rotate;
+    -o-animation-delay: 0;
+    -o-animation-duration: 3s;
+    -o-animation-timing-function: linear;
+    -o-animation-iteration-count: infinite;
+    animation-name: rotate;
+    animation-delay: 0;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; }
+
+@-webkit-keyframes rotate {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@-moz-keyframes rotate {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@-o-keyframes rotate {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@keyframes rotate {
+  0% {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
 html, body {
   height: 100%; }
 
