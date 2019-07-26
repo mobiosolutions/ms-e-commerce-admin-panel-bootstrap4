@@ -1,0 +1,93 @@
+.waves-effect{
+    position:relative;
+    cursor:pointer;
+    display:inline-block;
+    overflow:hidden;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    -webkit-tap-highlight-color:transparent;
+    vertical-align:middle;
+    z-index:1;
+    will-change:opacity, transform;
+    @include transition(all, 0.3s, ease-out);
+
+    .waves-ripple{
+        position:absolute;
+        @include border-radius(50%);
+        width:20px;
+        height:20px;
+        margin-top:-10px;
+        margin-left:-10px;
+        opacity:0;
+        background:rgba(0, 0, 0, 0.2);
+        @include transition(all, 0.7s, ease-out);
+        -webkit-transition-property:-webkit-transform, opacity;
+        -moz-transition-property:-moz-transform, opacity;
+        -o-transition-property:-o-transform, opacity;
+        transition-property:transform, opacity;
+        @include transform(scale(0)); 
+        pointer-events:none;
+    }
+    &.waves-light{
+        .waves-ripple{
+            background-color:lighten($light-color, 05%);
+        }
+    } 
+    &.waves-red {
+        .waves-ripple{
+            background-color:lighten($red-color, 40%);
+        }
+    }
+    &.waves-yellow{
+        .waves-ripple{
+            background-color:lighten($yellow-color, 40%);
+        }
+    }
+    &.waves-green{
+        .waves-ripple{
+            background-color:lighten($green-color, 40%);
+        }
+    }
+    &.waves-primary{
+        .waves-ripple{
+            background-color:lighten($primary-color, 40%);
+        }
+    }
+}
+.waves-notransition{
+    @include transition(none);    
+}
+.waves-circle{
+    @include transform(translate(0, 0));
+    -webkit-mask-image:-webkit-radial-gradient(circle, white 100%, black 100%);
+    text-align:center;
+    width:2.5em;
+    height:2.5em;
+    line-height:2.5em;
+    @include border-radius(50%);
+    -webkit-mask-image:none;
+}
+.waves-input-wrapper{
+    @include border-radius(0.2em);
+    vertical-align:bottom;
+}
+.waves-input-wrapper{
+    .waves-button-input{
+        position:relative;
+        top:0;
+        left:0;
+        z-index:1;
+    }
+}
+.waves-block{
+    display:block;
+}
+a{
+    &.waves-effect{
+        &.waves-ripple{
+            z-index:-1;
+        }
+    }
+}

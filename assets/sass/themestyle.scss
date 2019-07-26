@@ -1,0 +1,139 @@
+@import "variable";
+@import "mixins";
+@import "nesting";
+@import "header";
+@import "sidebar";
+@import "mainpanel";
+@import "dashboard";
+@import "formelement";
+@import "border";
+@import "button";
+@import "table";
+@import "tabs";
+@import "progress-bar";
+@import "tooltip";
+@import "rangeslider";
+@import "ripple";
+@import "dropdown";
+
+html, body {
+  height: 100%;
+}
+body {
+  font-family: "Graphik", sans-serif;
+  font-size: 100%;
+  line-height: 1.3;
+  background-color: $light-color;
+  
+}
+// @include scrollbars(5px, lighten($black-color, 80%));
+p {
+  font-size: $font-size + 2;
+  color: $theme-text-color;
+}
+h1, .h1{
+	font-size: $font-size+22;
+}
+h2, .h2{
+	font-size: $font-size+18;
+}
+h3, .h3{
+	font-size: $font-size+14;
+}
+h4, .h4{
+	font-size: $font-size+10;
+}
+h5, .h5{
+	font-size: $font-size+6;
+}
+h6, .h6	{
+	font-size: $font-size+2;
+}
+.badge {
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  color: $white-color;
+  font-size: $font-size - 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  margin-left: 20px;
+}
+.badge-primery {
+  background: $primary-color;
+}
+.badge-dark-blue {
+  background: $dark-blue-color;
+}
+.badge-accent {
+  background: $yellow-color;
+}
+.badge-light {
+  background-color: $light-color;
+}
+.badge-red {
+  background-color: $red-color;
+}
+.badge-green {
+  background-color: $green-color;
+}
+.badge-white {
+  background-color: $white-color;
+}
+.badge-black {
+  background-color: $black-color;
+}
+.bg-primary{
+	background-color: $primary-color;
+}
+.bg-secondary{
+	background-color: $dark-blue-color;
+}
+.bg-success{
+	background-color: $green-color;
+}
+.bg-danger{
+	background-color: $red-color;
+}
+.bg-warning{
+	background-color: $yellow-color;
+}
+.bg-light{
+	background-color: $light-color !important;
+}
+.bg-dark{
+	background-color: $black-color;
+}
+.bg-theme{
+	background-color: $text-color;
+}
+
+.text-primary{
+	color: $primary-color;
+}
+.text-secondary{
+	color: $dark-blue-color !important;
+}
+.text-success{
+	color: $green-color;
+}
+.text-danger{
+	color: $red-color;
+}
+.text-warning{
+	color: $yellow-color;
+}
+.text-light{
+	color: $light-color;
+}
+.text-dark{
+	color: $black-color;
+}
+.text-theme
+{
+	color: $theme-text-color;
+}

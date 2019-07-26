@@ -1,0 +1,80 @@
+// generic transform
+@mixin transform($transforms) {
+    -moz-transform: $transforms;
+      -o-transform: $transforms;
+     -ms-transform: $transforms;
+ -webkit-transform: $transforms;
+       transform: $transforms;
+}
+// rotate
+@mixin rotate ($deg) {
+@include transform(rotate(#{$deg}deg));
+}
+
+// scale
+@mixin scale($scale) {
+  @include transform(scale($scale));
+} 
+// translate
+@mixin translate ($x, $y) {
+@include transform(translate($x, $y));
+}
+// skew
+@mixin skew ($x, $y) {
+@include transform(skew(#{$x}deg, #{$y}deg));
+}
+//transform origin
+@mixin transform-origin ($origin) {
+ moz-transform-origin: $origin;
+      -o-transform-origin: $origin;
+     -ms-transform-origin: $origin;
+ -webkit-transform-origin: $origin;
+       transform-origin: $origin;
+}
+
+@mixin transition($what: all, $time: 0.2s, $show: ease-in-out) 
+{
+    -moz-transition:    $what $time $show;
+    -o-transition:      $what $time $show;
+    -webkit-transition: $what $time $show;
+    transition:         $what $time $show;
+}
+@mixin box-shadow($x-axis: 0, $y-axis: 1px, $blur: 2px,  $spread: 0px, $color: $default) 
+{
+    box-shadow: $x-axis $y-axis $blur $spread $color;
+    -moz-box-shadow: $x-axis $y-axis $blur $spread $color;
+    -o-box-shadow: $x-axis $y-axis $blur $spread $color;
+    -webkit-box-shadow: $x-axis $y-axis $blur $spread $color;
+}
+@mixin text-shadow($x-axis: 0, $y-axis: 1px, $blur: 2px, $color: $default) 
+{
+    text-shadow: $x-axis $y-axis $blur $color;
+    -moz-text-shadow: $x-axis $y-axis $blur $color;
+    -o-text-shadow: $x-axis $y-axis $blur $color;
+    -webkit-text-shadow: $x-axis $y-axis $blur $color;
+}
+// @mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white, 50%)) 
+// {
+//     ::-webkit-scrollbar {
+//         width:  $size;
+//         height: $size;
+//     }
+  
+//     ::-webkit-scrollbar-thumb {
+//         background: $foreground-color;
+//     }
+  
+//     ::-webkit-scrollbar-track {
+//         background: $background-color;
+//     }
+//     body {
+//         scrollbar-face-color: $foreground-color;
+//         scrollbar-track-color: $background-color;
+//       }
+// }
+@mixin border-radius($radius) {
+	border-radius: $radius;
+	-webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -o-border-radius: $radius;
+}
