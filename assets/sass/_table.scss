@@ -29,20 +29,31 @@ table {
     td {
       vertical-align: middle !important;
       .dropdown {
-        button {
-          background: transparent;
-          border: none;
+        .dropdown-menu{
+          @include transform(translate(0, 50px) !important);
+          right: 0;
+          left: auto !important;
+          &.show{
+            @include transform(translate(0, 30px) !important);
+          }
+        }        
+        .dropdown-toggle {
+          display: flex;
+          align-items: center;
+          justify-content: center;
           width: 30px;
           height: 30px;
           @include border-radius(50%);
           font-size: $font-size + 8px;
-          padding: 0;
           color: $primary-color;
-
+          cursor: pointer;
           &:hover,
           &:focus {
-            outline: none;
+            color: $primary-color;
             background: lighten($primary-color, 40%) !important;
+          }
+          &:after {
+            display: none;
           }
         }
         .dropdown-item {

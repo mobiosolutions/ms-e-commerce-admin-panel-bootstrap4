@@ -3,10 +3,10 @@ $(function () {
   'use strict';
 
   /**************** Custom Scroll **************/
-  (function ($) {  
+  (function ($) {
     $(document).ready(function () {
       $(".br-sideleft").mCustomScrollbar();
-      $("body").mCustomScrollbar({        
+      $("body").mCustomScrollbar({
         scrollInertia: 1000
       });
       $('.dataTables_scrollBody').mCustomScrollbar({
@@ -14,6 +14,28 @@ $(function () {
       });
     });
   })(jQuery);
+
+  /**************** Start Theme Setting **************/
+  ///////// Theme color choose function
+  function ThemeSelection(theme_selection) {
+    $("body")
+      .removeClass("theme-light theme-dark")
+      .addClass(theme_selection);
+  }
+  $(document).ready(function () {
+    ///////// Open and Close button
+    $("#settings-trigger").click(function () {
+      $(".theme-setting-wrapper").toggleClass("open-theme-setting-wrapper");
+      $("i", this).toggleClass("la la-cog la la-close");
+    });
+
+    ///////// Theme color choose
+    $(".radio input").click(function (e) {
+      var theme_selection = $(this).val();
+      ThemeSelection(theme_selection);
+    });
+  });
+  /**************** End Theme Setting **************/
 
   $(document).ready(function () {
     /**************** Tooltip **************/

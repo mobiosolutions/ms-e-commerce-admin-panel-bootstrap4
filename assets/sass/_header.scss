@@ -1,20 +1,17 @@
 header.header {
     @include box-shadow(0, 3px, 6px, 0, rgba(0, 0, 0, 0.02));
-    border: 1px solid rgba(40, 99, 236, 0.2);
+    border-bottom: 1px solid lighten($primary-color, 40%);
     height: 91px;    
     background: $white-color;
 }
 .br-logo {
     min-width: 150px;
-    border-right: 1px solid rgba(40, 99, 236, 0.2);
     height: 91px;
     z-index: 99;
     @include box-shadow(0, 3px, 6px, 0, rgba(0, 0, 0, 0.02));
-    border: 1px solid rgba(40, 99, 236, 0.2);
-    background: $white-color;
+    border: 1px solid  lighten($primary-color, 40%);
 }
 .br-header{
-    background: $white-color;
     position: relative;
     .br-header-left
     {
@@ -25,12 +22,11 @@ header.header {
     i
     {
         font-size: $font-size+10;
-        color: rgba(11, 22, 48, 0.5);
     }
     .form-control
     {
-        color: rgba(11, 22, 48, 0.5);
         height: 89px;
+        background: transparent !important;
         &:hover{
             outline: none;           
         }

@@ -1,9 +1,22 @@
 .theme-setting-wrapper{
+    position: fixed;
+    z-index: 52000;
+    right: 0;
+    top: 0;
+    @include transform(translate(400px, 0));
+    width: 400px;
+    height: 100%;
+    background: $white-color;
+    @include transition(all, 0.5s, ease);   
+    &.open-theme-setting-wrapper{
+        @include box-shadow(0, 10px, 20px, 0, lighten($black-color, 60%));
+        @include transform(translate(0, 0));
+    }
     #settings-trigger {
-        position: fixed;
+        position: absolute;
         top: 50%;
         @include transform(translate(0,-50%));
-        right: 0;
+        left: 0;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
         z-index: 50000;
@@ -13,12 +26,18 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        
+        margin-left: -38px;        
         i {
             font-size: $font-size + 6;;
-            line-height: 1;
-            @include animation(rotate, 0, 3s, linear, infinite);
+            line-height: 1;            
         }
+        // &:hover i{
+        //     @include animation(rotate, 0, 3s, linear, infinite);
+        // }
+    }
+    .theme-setting-sidebar-scroll {
+        height: calc(100% - 5rem);
+        overflow: hidden;
     }
 }
 @include keyframe (rotate) {
@@ -30,3 +49,5 @@
         @include transform(rotate(360deg));
     }
 }
+
+

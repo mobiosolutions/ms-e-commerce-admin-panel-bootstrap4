@@ -30,36 +30,29 @@
 <body>
 	<!-- ########## START: Setting Box ########## -->
 	<div class="theme-setting-wrapper">
-		<button type="button" id="settings-trigger" class="btn btn-primary waves-effect waves-primary"><i
-				class="la la-cog"></i></button>
+		<button type="button" id="settings-trigger" class="btn btn-primary waves-effect waves-primary">
+			<i class="la la-cog"></i>
+		</button>
 		<div class="theme-setting-sidebar">
 			<div class="h-100">
-				<div class="mt-6 d-flex align-items-center justify-between px-6">
-					<h4>THEME CUSTOMIZER</h4>
+				<div class="mt-4 d-flex align-items-center justify-between flex-wrap px-4">
+					<h4 class="font-weight-bold">THEME CUSTOMIZER</h4>
 					<small>Customize &amp; Preview in Real Time</small>
 				</div>
 				<hr>
 				<div class="theme-setting-sidebar-scroll">
-					<div class="px-6">
+					<div class="px-4">
 						<div>
-							<h5 class="mb-4">Dark Mode</h5>
-							<div>
-								<label class="con-ms-radio mr-4">
-									<input name="light" type="radio" class="ms-radio--input" value="light">
-									<span class="ms-radio">
-										<span class="ms-radio--borde"></span>
-										<span class="ms-radio--circle"></span>
-									</span>
-									<span class="ms-radio--label">Light</span>
-								</label>
-								<label class="con-ms-radio mr-4">
-									<input name="dark" type="radio" class="ms-radio--input" value="dark">
-									<span class="ms-radio">
-										<span class="ms-radio--borde"></span>
-										<span class="ms-radio--circle"></span>
-									</span>
-									<span class="ms-radio--label">Dark</span>
-								</label>
+							<h5 class="mb-2">Dark Mode</h5>
+							<div class="d-flex align-items-center">
+								<div class="radio radio-group mr-4">
+									<input type="radio" id="light" name="light" value="theme-light">
+									<label for="light">Light</label>
+								</div>
+								<div class="radio radio-group mr-4">
+									<input type="radio" id="dark" name="light" value="theme-dark">
+									<label for="dark">Dark</label>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -281,42 +274,42 @@
 			<div class="pagetitle">
 				<h4>Color</h4>
 			</div>
-			<div class="card border-0">
+			<div class="card">
 				<div class="card-body">
 					<div class="row px-5 py-5">
 						<div class="col">
-							<div class="color-box bg-primary text-white text-center py-5">
-								<h6 class="font-weight-bold">Primary</h6>
+							<div class="color-box bg-primary text-center py-5">
+								<h6 class="font-weight-bold text-white">Primary</h6>
 								<span class="text-primary h6 font-weight-bold">#2863EC</span>
 							</div>
 						</div>
 						<div class="col">
-							<div class="color-box bg-secondary text-white text-center py-5">
-								<h6 class="font-weight-bold">Font</h6>
+							<div class="color-box bg-secondary text-center py-5">
+								<h6 class="font-weight-bold text-white">Font</h6>
 								<span class="text-secondary h6 font-weight-bold">#0B1630</span>
 							</div>
 						</div>
 						<div class="col">
-							<div class="color-box bg-warning text-white text-center py-5">
-								<h6 class="font-weight-bold">Accent</h6>
+							<div class="color-box bg-warning text-center py-5">
+								<h6 class="font-weight-bold text-white">Accent</h6>
 								<span class="text-warning h6 font-weight-bold">#FEAC32</span>
 							</div>
 						</div>
 						<div class="col">
-							<div class="color-box bg-light text-secondary text-center py-5">
-								<h6 class="font-weight-bold">Background</h6>
+							<div class="color-box bg-light text-center py-5">
+								<h6 class="font-weight-bold text-secondary">Background</h6>
 								<span class="text-secondary h6 font-weight-bold">#EEF3FE</span>
 							</div>
 						</div>
 						<div class="col">
-							<div class="color-box bg-danger text-white text-center py-5">
-								<h6 class="font-weight-bold">Negative</h6>
+							<div class="color-box bg-danger text-center py-5">
+								<h6 class="font-weight-bold text-white">Negative</h6>
 								<span class="text-danger h6 font-weight-bold">#FF4949</span>
 							</div>
 						</div>
 						<div class="col">
-							<div class="color-box bg-success text-white text-center py-5">
-								<h6 class="font-weight-bold">Positive</h6>
+							<div class="color-box bg-success text-center py-5">
+								<h6 class="font-weight-bold text-white">Positive</h6>
 								<span class="text-success h6 font-weight-bold">#13CE66</span>
 							</div>
 						</div>
@@ -331,37 +324,37 @@
 			</div>
 			<div class="row">
 				<div class="col-12 col-md-6 col-lg-3">
-					<div class="card border-0">
+					<div class="card">
 						<div class="card-body">
 							<h2 class="text-secondary font-weight-bold mb-2">227+</h2>
-							<p class="text-theme mb-0">Uploaded Photos</p>
+							<p class="mb-0">Uploaded Photos</p>
 						</div>
 						<canvas id="UploadedPhotos" style="width: 100%;height: 80px;"></canvas>
 					</div>
 				</div>
 				<div class="col-12 col-md-6 col-lg-3">
-					<div class="card border-0">
+					<div class="card">
 						<div class="card-body">
 							<h2 class="text-secondary font-weight-bold mb-2">227+</h2>
-							<p class="text-theme mb-0">Downloaded Photos</p>
+							<p class="mb-0">Downloaded Photos</p>
 						</div>
 						<canvas id="DownloadedPhotos" style="width: 100%;height: 80px;"></canvas>
 					</div>
 				</div>
 				<div class="col-12 col-md-6 col-lg-3">
-					<div class="card border-0">
+					<div class="card">
 						<div class="card-body">
 							<h2 class="text-secondary font-weight-bold mb-2">127+</h2>
-							<p class="text-theme mb-0">Sold</p>
+							<p class="mb-0">Sold</p>
 						</div>
 						<canvas id="Sold" style="width: 100%;height: 80px;"></canvas>
 					</div>
 				</div>
 				<div class="col-12 col-md-6 col-lg-3">
-					<div class="card border-0">
+					<div class="card">
 						<div class="card-body">
 							<h2 class="text-secondary font-weight-bold mb-2">12+</h2>
-							<p class="text-theme mb-0">Pending Payment</p>
+							<p class="mb-0">Pending Payment</p>
 						</div>
 						<canvas id="PendingPayment" style="width: 100%;height: 80px;"></canvas>
 					</div>
@@ -374,8 +367,8 @@
 				<h4>UI elememnts</h4>
 			</div>
 			<!-- UI Button -->
-			<div class="card  border-0">
-				<div class="card-header bg-white py-4 border-light">
+			<div class="card">
+				<div class="card-header py-4">
 					<h5 class="text-secondary font-weight-bold mb-0">UI Button</h5>
 				</div>
 				<div class="card-body">
@@ -414,7 +407,7 @@
 						<li><button type="button"
 								class="btn btn-outline-warning waves-effect waves-yellow">Warning</button></li>
 						<li><button type="button"
-								class="btn btn-outline-light text-secondary waves-effect waves-primary">Light</button>
+								class="btn btn-outline-light waves-effect waves-primary">Light</button>
 						</li>
 						<li><button type="button" class="btn btn-link waves-effect waves-primary">Link</button>
 						</li>
@@ -448,7 +441,7 @@
 
 			<!-- Form Elements -->
 			<div class="card  border-0">
-				<div class="card-header bg-white py-4 border-light">
+				<div class="card-header py-4">
 					<h5 class="text-secondary font-weight-bold mb-0">Form Elements</h5>
 				</div>
 				<div class="card-body">
@@ -553,7 +546,7 @@
 			<div class="row my-5">
 				<div class="col-12 col-lg-6">
 					<div class="card  border-0">
-						<div class="card-header bg-white py-4 border-light">
+						<div class="card-header py-4">
 							<h5 class="text-secondary font-weight-bold mb-0">Data Table</h5>
 						</div>
 						<div class="card-body">
@@ -570,10 +563,9 @@
 										<td>Arts & Crafts</td>
 										<td>1193</td>
 										<td align="center">
-											<div class="dropdown dropleft">
-												<button class="la la-ellipsis-h" type="button" id="dropdownMenuButton"
-													data-toggle="dropdown" aria-haspopup="true"
-													aria-expanded="false"></button>
+											<div class="dropdown">
+												<a class="la la-ellipsis-h dropdown-toggle" id="dropdownMenuButton"
+													data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
 												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 													<a class="dropdown-item" href="#"><i
 															class="la la-info-circle"></i>View Details</a>
@@ -592,11 +584,10 @@
 										<td>Automotive</td>
 										<td>1176</td>
 										<td align="center">
-											<div class="dropdown dropleft">
-												<button class="la la-ellipsis-h" type="button" id="dropdownMenuButton"
-													data-toggle="dropdown" aria-haspopup="true"
-													aria-expanded="false"></button>
-												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+											<div class="dropdown">
+												<a class="la la-ellipsis-h dropdown-toggle" id="dropdownMenuButton1"
+													data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 													<a class="dropdown-item" href="#"><i
 															class="la la-info-circle"></i>View Details</a>
 													<div class="dropdown-divider"></div>
@@ -614,11 +605,10 @@
 										<td>Baby</td>
 										<td>1045</td>
 										<td align="center">
-											<div class="dropdown dropleft">
-												<button class="la la-ellipsis-h" type="button" id="dropdownMenuButton"
-													data-toggle="dropdown" aria-haspopup="true"
-													aria-expanded="false"></button>
-												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+											<div class="dropdown">
+												<a class="la la-ellipsis-h dropdown-toggle" id="dropdownMenuButton2"
+													data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
 													<a class="dropdown-item" href="#"><i
 															class="la la-info-circle"></i>View Details</a>
 													<div class="dropdown-divider"></div>
@@ -636,11 +626,10 @@
 										<td>Baby</td>
 										<td>1045</td>
 										<td align="center">
-											<div class="dropdown dropleft">
-												<button class="la la-ellipsis-h" type="button" id="dropdownMenuButton"
-													data-toggle="dropdown" aria-haspopup="true"
-													aria-expanded="false"></button>
-												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+											<div class="dropdown">
+												<a class="la la-ellipsis-h dropdown-toggle" id="dropdownMenuButton3"
+													data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
 													<a class="dropdown-item" href="#"><i
 															class="la la-info-circle"></i>View Details</a>
 													<div class="dropdown-divider"></div>
@@ -658,11 +647,10 @@
 										<td>Baby</td>
 										<td>1045</td>
 										<td align="center">
-											<div class="dropdown dropleft">
-												<button class="la la-ellipsis-h" type="button" id="dropdownMenuButton"
-													data-toggle="dropdown" aria-haspopup="true"
-													aria-expanded="false"></button>
-												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+											<div class="dropdown">
+												<a class="la la-ellipsis-h dropdown-toggle" id="dropdownMenuButton4"
+													data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton4">
 													<a class="dropdown-item" href="#"><i
 															class="la la-info-circle"></i>View Details</a>
 													<div class="dropdown-divider"></div>
@@ -680,11 +668,10 @@
 										<td>Baby</td>
 										<td>1045</td>
 										<td align="center">
-											<div class="dropdown dropleft">
-												<button class="la la-ellipsis-h" type="button" id="dropdownMenuButton"
-													data-toggle="dropdown" aria-haspopup="true"
-													aria-expanded="false"></button>
-												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+											<div class="dropdown">
+												<a class="la la-ellipsis-h dropdown-toggle" id="dropdownMenuButton5"
+													data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton5">
 													<a class="dropdown-item" href="#"><i
 															class="la la-info-circle"></i>View Details</a>
 													<div class="dropdown-divider"></div>
@@ -702,11 +689,10 @@
 										<td>Baby</td>
 										<td>1045</td>
 										<td align="center">
-											<div class="dropdown dropleft">
-												<button class="la la-ellipsis-h" type="button" id="dropdownMenuButton"
-													data-toggle="dropdown" aria-haspopup="true"
-													aria-expanded="false"></button>
-												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+											<div class="dropdown">
+												<a class="la la-ellipsis-h dropdown-toggle"id="dropdownMenuButton6"
+													data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton6">
 													<a class="dropdown-item" href="#"><i
 															class="la la-info-circle"></i>View Details</a>
 													<div class="dropdown-divider"></div>
@@ -724,11 +710,10 @@
 										<td>Arts & Crafts</td>
 										<td>1193</td>
 										<td align="center">
-											<div class="dropdown dropleft">
-												<button class="la la-ellipsis-h" type="button" id="dropdownMenuButton"
-													data-toggle="dropdown" aria-haspopup="true"
-													aria-expanded="false"></button>
-												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+											<div class="dropdown">
+												<a class="la la-ellipsis-h dropdown-toggle" id="dropdownMenuButton7"
+													data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton7">
 													<a class="dropdown-item" href="#"><i
 															class="la la-info-circle"></i>View Details</a>
 													<div class="dropdown-divider"></div>
@@ -746,11 +731,10 @@
 										<td>Automotive</td>
 										<td>1176</td>
 										<td align="center">
-											<div class="dropdown dropleft">
-												<button class="la la-ellipsis-h" type="button" id="dropdownMenuButton"
-													data-toggle="dropdown" aria-haspopup="true"
-													aria-expanded="false"></button>
-												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+											<div class="dropdown">
+												<a class="la la-ellipsis-h dropdown-toggle" id="dropdownMenuButton8"
+													data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton8">
 													<a class="dropdown-item" href="#"><i
 															class="la la-info-circle"></i>View Details</a>
 													<div class="dropdown-divider"></div>
@@ -768,11 +752,10 @@
 										<td>Baby</td>
 										<td>1045</td>
 										<td align="center">
-											<div class="dropdown dropleft">
-												<button class="la la-ellipsis-h" type="button" id="dropdownMenuButton"
-													data-toggle="dropdown" aria-haspopup="true"
-													aria-expanded="false"></button>
-												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+											<div class="dropdown">
+												<a class="la la-ellipsis-h dropdown-toggle" id="dropdownMenuButton9"
+													data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton9">
 													<a class="dropdown-item" href="#"><i
 															class="la la-info-circle"></i>View Details</a>
 													<div class="dropdown-divider"></div>
@@ -793,7 +776,7 @@
 				</div>
 				<div class="col-12 col-lg-6">
 					<div class="card  border-0">
-						<div class="card-header bg-white py-4 border-light">
+						<div class="card-header py-4">
 							<h5 class="text-secondary font-weight-bold mb-0">Data Table</h5>
 						</div>
 						<div class="card-body">
@@ -810,11 +793,10 @@
 										<td>Arts & Crafts</td>
 										<td>1193</td>
 										<td align="center">
-											<div class="dropdown dropleft">
-												<button class="la la-ellipsis-h" type="button" id="dropdownMenuButton"
-													data-toggle="dropdown" aria-haspopup="true"
-													aria-expanded="false"></button>
-												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+											<div class="dropdown">
+												<a class="la la-ellipsis-h dropdown-toggle" id="dropdownMenuButton10"
+													data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton10">
 													<a class="dropdown-item" href="#"><i
 															class="la la-info-circle"></i>View Details</a>
 													<div class="dropdown-divider"></div>
@@ -832,11 +814,10 @@
 										<td>Automotive</td>
 										<td>1176</td>
 										<td align="center">
-											<div class="dropdown dropleft">
-												<button class="la la-ellipsis-h" type="button" id="dropdownMenuButton1"
-													data-toggle="dropdown" aria-haspopup="true"
-													aria-expanded="false"></button>
-												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+											<div class="dropdown">
+												<a class="la la-ellipsis-h dropdown-toggle" id="dropdownMenuButton11"
+													data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton11">
 													<a class="dropdown-item" href="#"><i
 															class="la la-info-circle"></i>View Details</a>
 													<div class="dropdown-divider"></div>
@@ -854,11 +835,10 @@
 										<td>Baby</td>
 										<td>1045</td>
 										<td align="center">
-											<div class="dropdown dropleft">
-												<button class="la la-ellipsis-h" type="button" id="dropdownMenuButton2"
-													data-toggle="dropdown" aria-haspopup="true"
-													aria-expanded="false"></button>
-												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+											<div class="dropdown">
+												<a class="la la-ellipsis-h dropdown-toggle" id="dropdownMenuButton12"
+													data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton12">
 													<a class="dropdown-item" href="#"><i
 															class="la la-info-circle"></i>View Details</a>
 													<div class="dropdown-divider"></div>
@@ -876,11 +856,10 @@
 										<td>Baby</td>
 										<td>1045</td>
 										<td align="center">
-											<div class="dropdown dropleft">
-												<button class="la la-ellipsis-h" type="button" id="dropdownMenuButton3"
-													data-toggle="dropdown" aria-haspopup="true"
-													aria-expanded="false"></button>
-												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+											<div class="dropdown">
+												<a class="la la-ellipsis-h dropdown-toggle" id="dropdownMenuButton13"
+													data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton13">
 													<a class="dropdown-item" href="#"><i
 															class="la la-info-circle"></i>View Details</a>
 													<div class="dropdown-divider"></div>
@@ -898,11 +877,10 @@
 										<td>Baby</td>
 										<td>1045</td>
 										<td align="center">
-											<div class="dropdown dropleft">
-												<button class="la la-ellipsis-h" type="button" id="dropdownMenuButton4"
-													data-toggle="dropdown" aria-haspopup="true"
-													aria-expanded="false"></button>
-												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton4">
+											<div class="dropdown">
+												<a class="la la-ellipsis-h dropdown-toggle" id="dropdownMenuButton14"
+													data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton14">
 													<a class="dropdown-item" href="#"><i
 															class="la la-info-circle"></i>View Details</a>
 													<div class="dropdown-divider"></div>
@@ -920,11 +898,10 @@
 										<td>Baby</td>
 										<td>1045</td>
 										<td align="center">
-											<div class="dropdown dropleft">
-												<button class="la la-ellipsis-h" type="button" id="dropdownMenuButton5"
-													data-toggle="dropdown" aria-haspopup="true"
-													aria-expanded="false"></button>
-												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton5">
+											<div class="dropdown">
+												<a class="la la-ellipsis-h dropdown-toggle" id="dropdownMenuButton15"
+													data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton15">
 													<a class="dropdown-item" href="#"><i
 															class="la la-info-circle"></i>View Details</a>
 													<div class="dropdown-divider"></div>
@@ -942,11 +919,10 @@
 										<td>Baby</td>
 										<td>1045</td>
 										<td align="center">
-											<div class="dropdown dropleft">
-												<button class="la la-ellipsis-h" type="button" id="dropdownMenuButton6"
-													data-toggle="dropdown" aria-haspopup="true"
-													aria-expanded="false"></button>
-												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton6">
+											<div class="dropdown">
+												<a class="la la-ellipsis-h dropdown-toggle" id="dropdownMenuButton16"
+													data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton16">
 													<a class="dropdown-item" href="#"><i
 															class="la la-info-circle"></i>View Details</a>
 													<div class="dropdown-divider"></div>
@@ -964,11 +940,10 @@
 										<td>Arts & Crafts</td>
 										<td>1193</td>
 										<td align="center">
-											<div class="dropdown dropleft">
-												<button class="la la-ellipsis-h" type="button" id="dropdownMenuButton7"
-													data-toggle="dropdown" aria-haspopup="true"
-													aria-expanded="false"></button>
-												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton7">
+											<div class="dropdown">
+												<a class="la la-ellipsis-h dropdown-toggle" id="dropdownMenuButton17"
+													data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton17">
 													<a class="dropdown-item" href="#"><i
 															class="la la-info-circle"></i>View Details</a>
 													<div class="dropdown-divider"></div>
@@ -986,11 +961,10 @@
 										<td>Automotive</td>
 										<td>1176</td>
 										<td align="center">
-											<div class="dropdown dropleft">
-												<button class="la la-ellipsis-h" type="button" id="dropdownMenuButton8"
-													data-toggle="dropdown" aria-haspopup="true"
-													aria-expanded="false"></button>
-												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton8">
+											<div class="dropdown">
+												<a class="la la-ellipsis-h dropdown-toggle" id="dropdownMenuButton18"
+													data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton18">
 													<a class="dropdown-item" href="#"><i
 															class="la la-info-circle"></i>View Details</a>
 													<div class="dropdown-divider"></div>
@@ -1008,11 +982,10 @@
 										<td>Baby</td>
 										<td>1045</td>
 										<td align="center">
-											<div class="dropdown dropleft">
-												<button class="la la-ellipsis-h" type="button" id="dropdownMenuButton9"
-													data-toggle="dropdown" aria-haspopup="true"
-													aria-expanded="false"></button>
-												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton9">
+											<div class="dropdown">
+												<a class="la la-ellipsis-h dropdown-toggle" id="dropdownMenuButton19"
+													data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton19">
 													<a class="dropdown-item" href="#"><i
 															class="la la-info-circle"></i>View Details</a>
 													<div class="dropdown-divider"></div>
@@ -1036,7 +1009,7 @@
 
 			<!-- Other Elements -->
 			<div class="card  border-0">
-				<div class="card-header bg-white py-4 border-light">
+				<div class="card-header py-4">
 					<h5 class="text-secondary font-weight-bold mb-0">Other Elements</h5>
 				</div>
 				<div class="card-body">
@@ -1092,9 +1065,9 @@
 							</div>
 							<div class="progress mb-5">
 								<div class="progress-bar progress-bar-striped bg-success progress-bar-animated progress-success"
-									role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
-									style="width: 80%;">
-									<div class="progress-value progress-value-top">80%</div>
+									role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+									style="width: 40%;">
+									<div class="progress-value progress-value-top">40%</div>
 								</div>
 							</div>
 							<div class="progress mb-5">
@@ -1222,7 +1195,6 @@
 <script src="../assets/scripts/Chart.min.js"></script>
 <script src="../assets/scripts/dashboard.js"></script>
 <script src="../assets/scripts/datatables.min.js"></script>
-<script src="../assets/scripts/scrollBar.js"></script>
 <script src="../assets/scripts/ripple.min.js"></script>
 <script src="../assets/scripts/custome.js"></script>
 

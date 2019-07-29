@@ -5,54 +5,55 @@
   left: 0;
   height: 100vh;
   background: $white-color;
-  border-right: 1px solid rgba(40, 99, 236, 0.2);
   overflow: auto;
-
-  li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    &::after, &::before{
-      content: '';
-      width: 0;
-      height: 2px;
-      background: $primary-color;
-      @include transition(all, 0.5s, ease);
-      position: absolute;
-      bottom: 0;
-      left: 0;
-    }
-    &::before{
-      width: 100%;
-      background: $light-color;
-    }
-    &:hover,
-    &.active {
-      background: lighten($primary-color, 45%);
-      border-bottom-color: $primary-color;
-      @include transition(all, 0.5s, ease);
+  ul{
+    border-right: 1px solid  lighten($primary-color, 40%);
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      &::after, &::before{
+        content: '';
+        width: 0;
+        height: 2px;
+        background: $primary-color;
+        @include transition(all, 0.5s, ease);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+      &::before{
+        width: 100%;
+        background: $light-color;
+      }
+      &:hover,
+      &.active {
+        background: lighten($primary-color, 45%);
+        border-bottom-color: $primary-color;
+        @include transition(all, 0.5s, ease);
+        i {
+          @include text-shadow(0, 8px, 6px, rgba(0, 0, 0, 0.02));
+        }
+        a {
+          color: $primary-color;
+        }
+        &::after
+        {
+          width: 100%;
+        }
+      }
       i {
-        @include text-shadow(0, 8px, 6px, rgba(0, 0, 0, 0.02));
+        font-size: $font-size + 26;
+        margin-bottom: 5px;
       }
       a {
-        color: $primary-color;
+        font-size: $font-size + 2;
+        color: $dark-blue-color;
+        padding: 17px 0;
+        min-width: 150px;
       }
-      &::after
-      {
-        width: 100%;
-      }
-    }
-    i {
-      font-size: $font-size + 26;
-      margin-bottom: 5px;
-    }
-    a {
-      font-size: $font-size + 2;
-      color: $dark-blue-color;
-      padding: 17px 0;
-      min-width: 150px;
     }
   }
   // @include scrollbars(0, rgb(255, 255, 255));
