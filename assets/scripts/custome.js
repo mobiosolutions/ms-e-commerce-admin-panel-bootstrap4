@@ -2,12 +2,25 @@ $(function () {
   /* CustomeJS */
   'use strict';
 
+  /**************** Password Toggle **************/
+  $(document).ready(function () {
+    $("#Password").click(function () {
+      $(this).toggleClass("la-eye la-eye-slash");
+      var input = $($(this).attr("toggle"));
+      if (input.attr("type") == "password") {
+        input.attr("type", "text");
+      } else {
+        input.attr("type", "password");
+      }
+    });
+  });
+
   /**************** Custom Scroll **************/
   (function ($) {
     $(document).ready(function () {
-      $(".br-sideleft").mCustomScrollbar();
+      $(".custom-scroll").mCustomScrollbar();
       $("body").mCustomScrollbar({
-        scrollInertia: 1000
+        scrollInertia: 1500
       });
       $('.dataTables_scrollBody').mCustomScrollbar({
         scrollInertia: 500

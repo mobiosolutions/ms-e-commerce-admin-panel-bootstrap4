@@ -58,7 +58,6 @@
   width: $width !important;
   .btn {
     padding: 10px 15px;
-    color: $theme-text-color;
     &:focus {
       @include box-shadow(0, 0, 0, 0, transparent);
       border-color: $primary-color !important;

@@ -14,4 +14,15 @@
             @include transform(translate(0, 0) !important);
         }
     }
+    &.bootstrap-select{
+        .dropdown-menu
+        {
+            @include transform(translate(0, 0) !important);
+            top: 100% !important;
+            border: 1px solid $primary-color;     
+            ul.dropdown-menu{
+                border: none;
+            }       
+        }
+    }
 }
