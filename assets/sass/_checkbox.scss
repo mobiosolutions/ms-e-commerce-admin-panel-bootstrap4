@@ -84,7 +84,7 @@
             border: 1px solid darken($light-color, 10%);
             @include border-radius(4px);
             top: 50%;
-            transform: translateY(-50%);
+            @include transform(translate(0, -50%));
             left: 0;
             @include transition(all, 0.3s, ease-in-out);
         }

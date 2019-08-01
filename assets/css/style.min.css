@@ -1544,7 +1544,11 @@ h1, h2, h3, h4, h5, h6 {
       -moz-border-radius: 50%;
       -o-border-radius: 50%;
       top: 50%;
-      transform: translateY(-50%);
+      -moz-transform: translate(0, -50%);
+      -o-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+      -webkit-transform: translate(0, -50%);
+      transform: translate(0, -50%);
       left: 0;
       -moz-transition: all 0.3s ease-in-out;
       -o-transition: all 0.3s ease-in-out;
@@ -1639,7 +1643,11 @@ h1, h2, h3, h4, h5, h6 {
       -moz-border-radius: 4px;
       -o-border-radius: 4px;
       top: 50%;
-      transform: translateY(-50%);
+      -moz-transform: translate(0, -50%);
+      -o-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+      -webkit-transform: translate(0, -50%);
+      transform: translate(0, -50%);
       left: 0;
       -moz-transition: all 0.3s ease-in-out;
       -o-transition: all 0.3s ease-in-out;
@@ -1714,7 +1722,54 @@ body.theme-dark {
       .login-wrapper .login-form {
         width: 60%; } }
 
-html, body {
+.custom-switch {
+  padding: 0; }
+  .custom-switch .custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: none; }
+  .custom-switch .custom-control-input:checked ~ .custom-control-label::before {
+    border-color: #2863ec;
+    background: #2863ec; }
+  .custom-switch .custom-control-input:checked ~ .custom-control-label::after {
+    -moz-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    left: 22px; }
+  .custom-switch.success-switch .custom-control-input:checked ~ .custom-control-label::before {
+    border-color: #13ce66;
+    background: #13ce66; }
+  .custom-switch.danger-switch .custom-control-input:checked ~ .custom-control-label::before {
+    border-color: #ff4949;
+    background: #ff4949; }
+  .custom-switch.warning-switch .custom-control-input:checked ~ .custom-control-label::before {
+    border-color: #feac32;
+    background: #feac32; }
+  .custom-switch.dark-switch .custom-control-input:checked ~ .custom-control-label::before {
+    border-color: #0b1630;
+    background: #0b1630; }
+  .custom-switch.light-switch .custom-control-input:checked ~ .custom-control-label::before {
+    border-color: #eef3fe;
+    background: #eef3fe; }
+  .custom-switch .custom-control-label {
+    cursor: pointer; }
+    .custom-switch .custom-control-label:before {
+      height: 22px;
+      width: 42px;
+      border-radius: 50px;
+      background: #e6e6e6;
+      border: none;
+      position: static; }
+    .custom-switch .custom-control-label:after {
+      width: calc(22px - 4px);
+      height: calc(22px - 4px);
+      background: #ffffff;
+      left: 2px;
+      top: 2px;
+      transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease; }
+
+html,
+body {
   height: 100%; }
 
 body {

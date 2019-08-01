@@ -24,18 +24,21 @@
 @import "checkbox";
 @import "theme-dark";
 @import "login";
-
-html, body {
-  height: 100%;
-}
+@import "switch";
+html,
 body {
-  font-family: "Graphik", sans-serif;
-  font-size: 100%;
-  line-height: 1.3;
-  background-color: $light-color;  
-  color: $theme-text-color;
+    height: 100%;
 }
-hr{
-  margin: 14px 0;
-  border-color: lighten($primary-color, 40%);
+
+body {
+    font-family: "Graphik", sans-serif;
+    font-size: 100%;
+    line-height: 1.3;
+    background-color: $light-color;
+    color: $theme-text-color;
+}
+
+hr {
+    margin: 14px 0;
+    border-color: lighten($primary-color, 40%);
 }

@@ -1,0 +1,75 @@
+.custom-switch {
+    padding: 0;
+    .custom-control-input {
+        &:focus~.custom-control-label::before {
+            box-shadow: none;
+        }
+        &:checked~.custom-control-label::before {
+            border-color: $primary-color;
+            background: $primary-color;
+        }
+        &:checked~.custom-control-label::after {
+            @include transform(translate(0, 0));
+            left: 22px;
+        }
+    }
+    &.success-switch {
+        .custom-control-input {
+            &:checked~.custom-control-label::before {
+                border-color: $green-color;
+                background: $green-color;
+            }
+        }
+    }
+    &.danger-switch {
+        .custom-control-input {
+            &:checked~.custom-control-label::before {
+                border-color: $red-color;
+                background: $red-color;
+            }
+        }
+    }
+    &.warning-switch {
+        .custom-control-input {
+            &:checked~.custom-control-label::before {
+                border-color: $yellow-color;
+                background: $yellow-color;
+            }
+        }
+    }
+    &.dark-switch {
+        .custom-control-input {
+            &:checked~.custom-control-label::before {
+                border-color: $dark-blue-color;
+                background: $dark-blue-color;
+            }
+        }
+    }
+    &.light-switch {
+        .custom-control-input {
+            &:checked~.custom-control-label::before {
+                border-color: $light-color;
+                background: $light-color;
+            }
+        }
+    }
+    .custom-control-label {
+        cursor: pointer;
+        &:before {
+            height: 22px;
+            width: 42px;
+            border-radius: 50px;
+            background: lighten($black-color, 90%);
+            border: none;
+            position: static;
+        }
+        &:after {
+            width: calc(22px - 4px);
+            height: calc(22px - 4px);
+            background: $white-color;
+            left: 2px;
+            top: 2px;
+            transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
+        }
+    }
+}
