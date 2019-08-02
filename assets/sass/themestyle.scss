@@ -1,5 +1,6 @@
 @import "variable";
 @import "mixins";
+@import "property";
 @import "nesting";
 @import "typography";
 @import "header";
@@ -25,20 +26,4 @@
 @import "theme-dark";
 @import "login";
 @import "switch";
-html,
-body {
-    height: 100%;
-}
-
-body {
-    font-family: "Graphik", sans-serif;
-    font-size: 100%;
-    line-height: 1.3;
-    background-color: $light-color;
-    color: $theme-text-color;
-}
-
-hr {
-    margin: 14px 0;
-    border-color: lighten($primary-color, 40%);
-}
+@import "alert"

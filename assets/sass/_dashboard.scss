@@ -1,25 +1,25 @@
 .color-box {
-  position: relative;
-  @include border-radius(4px);
-  span {
-    position: absolute;
-    bottom: -20px;
-    background: $white-color;
-    left: 50%;
-    padding: 10px 20px;
+    position: relative;
     @include border-radius(4px);
-    @include box-shadow(0, 3px, 6px, 0, rgba(0, 0, 0, 0.16));
-    margin: 0;
-    @include transform(translate(-50%, 0));
-  }
+    span {
+        position: absolute;
+        bottom: -20px;
+        background: $white-color;
+        left: 50%;
+        padding: 10px 20px;
+        @include border-radius(4px);
+        @include box-shadow(0, 3px, 6px, 0, rgba(0, 0, 0, 0.16));
+        margin: 0;
+        @include transform(translate(-50%, 0));
+    }
 }
-.buuton-group
-{
-    li
-    {
+
+.buuton-group {
+    li {
+        display: inline-block;
         margin-left: 20px;
-        &:first-child
-        {
+        margin-bottom: 20px;
+        &:first-child {
             margin-left: 0;
         }
     }

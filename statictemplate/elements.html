@@ -299,7 +299,7 @@
                     <ul class="d-flex align-items-center">
                         <li>
                             <div class="radio mr-4">
-                                <input type="radio" id="radio-primary" name="radio-color">
+                                <input type="radio" checked id="radio-primary" name="radio-color">
                                 <label for="radio-primary">Primary</label>
                             </div>
                         </li>
@@ -346,19 +346,19 @@
                     <ul class="d-flex align-items-center">
                         <li>
                             <div class="checkbox mr-4">
-                                <input type="checkbox" id="checkbox-primary" name="checkbox-color">
+                                <input type="checkbox" checked id="checkbox-primary" name="checkbox-color">
                                 <label for="checkbox-primary">Primary</label>
                             </div>
                         </li>
                         <li>
                             <div class="checkbox checkbox-success mr-4">
-                                <input type="checkbox" id="checkbox-success" name="checkbox-color">
+                                <input type="checkbox" checked id="checkbox-success" name="checkbox-color">
                                 <label for="checkbox-success">Success</label>
                             </div>
                         </li>
                         <li>
                             <div class="checkbox checkbox-danger mr-4">
-                                <input type="checkbox" id="checkbox-danger" name="checkbox-color">
+                                <input type="checkbox" checked id="checkbox-danger" name="checkbox-color">
                                 <label for="checkbox-danger">Danger</label>
                             </div>
                         </li>
@@ -409,7 +409,7 @@
                         <li class="mr-4">
                             <label>Danger</label>
                             <div class="danger-switch custom-switch">
-                                <input type="checkbox" class="custom-control-input" id="customSwitch3">
+                                <input type="checkbox" checked class="custom-control-input" id="customSwitch3">
                                 <label class="custom-control-label" for="customSwitch3"></label>
                             </div>
                         </li>
@@ -423,7 +423,7 @@
                         <li class="mr-4">
                             <label>Dark</label>
                             <div class="dark-switch custom-switch">
-                                <input type="checkbox" class="custom-control-input" id="customSwitch5">
+                                <input type="checkbox" checked class="custom-control-input" id="customSwitch5">
                                 <label class="custom-control-label" for="customSwitch5"></label>
                             </div>
                         </li>
@@ -445,10 +445,120 @@
                 </div>
                 <div class="card-body">
                     <div class="row">
-
-                    </div>
-                    <div class="alert alert-primary" role="alert">
-                        A simple primary alert—check it out!
+                        <!-- Primary Alert -->
+                        <div class="col-12 col-lg-4">
+                            <div class="alert alert-primary" role="alert">
+                                Primary alert!
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <div class="alert alert-primary" role="alert">
+                                Primary alert with <a href="javascript:;" class="alert-link">link</a>.
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                                <strong>Primary alert</strong> with close button.
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Success Alert -->
+                        <div class="col-12 col-lg-4">
+                            <div class="alert alert-success" role="alert">
+                                Success alert!
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <div class="alert alert-success" role="alert">
+                                Success alert with <a href="javascript:;" class="alert-link">link</a>.
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                <strong>success alert</strong> with close button.
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                            </div>
+                        </div>
+                        <!-- Danger Alert -->
+                        <div class="col-12 col-lg-4">
+                            <div class="alert alert-danger" role="alert">
+                                Danger alert!
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <div class="alert alert-danger" role="alert">
+                                Danger alert with <a href="javascript:;" class="alert-link">link</a>.
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                <strong>Danger alert</strong> with close button.
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                        </button>
+                            </div>
+                        </div>
+                        <!-- Warning Alert -->
+                        <div class="col-12 col-lg-4">
+                            <div class="alert alert-warning" role="alert">
+                                Warning alert!
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <div class="alert alert-warning" role="alert">
+                                Warning alert with <a href="javascript:;" class="alert-link">link</a>.
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                <strong>Warning alert</strong> with close button.
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                              <span aria-hidden="true">&times;</span>
+                                            </button>
+                            </div>
+                        </div>
+                        <!-- Dark Alert -->
+                        <div class="col-12 col-lg-4">
+                            <div class="alert alert-dark" role="alert">
+                                Dark alert!
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <div class="alert alert-dark" role="alert">
+                                Dark alert with <a href="javascript:;" class="alert-link">link</a>.
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <div class="alert alert-dark alert-dismissible fade show" role="alert">
+                                <strong>Dark alert</strong> with close button.
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                  <span aria-hidden="true">&times;</span>
+                                                </button>
+                            </div>
+                        </div>
+                        <!-- Light Alert -->
+                        <div class="col-12 col-lg-4">
+                            <div class="alert alert-light" role="alert">
+                                Light alert!
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <div class="alert alert-light" role="alert">
+                                Light alert with <a href="javascript:;" class="alert-link">link</a>.
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <div class="alert alert-light alert-dismissible fade show" role="alert">
+                                <strong>Light alert</strong> with close button.
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                      <span aria-hidden="true">&times;</span>
+                                                    </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

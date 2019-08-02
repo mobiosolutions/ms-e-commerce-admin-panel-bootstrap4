@@ -28,6 +28,7 @@
 </head>
 
 <body>
+    <div class="overlay-background"></div>
     <!-- ########## START: Setting Box ########## -->
     <div class="theme-setting-wrapper">
         <button type="button" id="settings-trigger" class="btn btn-primary waves-effect waves-primary">
@@ -61,46 +62,48 @@
             </div>
         </div>
     </div>
-
     <!-- ########## END: Setting Box ########## -->
 
-    <header class="header fixed-top d-flex align-items-center">
-        <!-- ########## START: LEFT PANEL ########## -->
+    <!-- ########## START: LEFT PANEL ########## -->
+    <div class="br-sideleft">
+        <a id="remove-menu" class="la la-close"></a>
         <div class="br-logo d-flex justify-content-center align-items-center">
             <a href="index.html"><img src="../assets/image/logo.png" alt="MS Admin Panel" width="80" /></a>
         </div>
-        <div class="br-sideleft custom-scroll">
-            <ul>
-                <li class="active"><a href="index.html" class="waves-effect waves-primary"><i
-						class="la la-dashboard"></i><br>Dashboard</a></li>
-                <li><a href="elements.html" class="waves-effect waves-primary"><i class="la la-clone"></i><br>Elements</a></li>
-                <!-- <li><a href="javascript:;" class="waves-effect waves-primary"><i
-						class="la la-bullhorn"></i><br>Campaign</a></li> -->
-                <li class="dropdown-sub-menu">
-                    <a href="javascript:;" class="waves-effect waves-primary"><i
-							class="la la-users"></i><br>Customers</a>
-                    <!-- <ul class="sub-menu">
-						<li><a href="javascript:;"><i class="la la-users"></i>New Customers</a></li>
-						<li><a href="javascript:;"><i class="la la-users"></i>Old Customers</a></li>
-					</ul> -->
-                </li>
-                <li><a href="javascript:;" class="waves-effect waves-primary"><i
-							class="la la-cart-arrow-down"></i><br>Orders</a></li>
-                <li><a href="javascript:;" class="waves-effect waves-primary"><i
-							class="la la-wechat"></i><br>Messages</a></li>
-                <li><a href="javascript:;" class="waves-effect waves-primary"><i class="la la-bank"></i><br>Payments</a>
-                </li>
-                <li><a href="javascript:;" class="waves-effect waves-primary"><i class="la la-image"></i><br>Media
-						Manager</a></li>
-                <li><a href="javascript:;" class="waves-effect waves-primary"><i class="la la-cog"></i><br>Settings</a>
-                </li>
-            </ul>
-        </div>
-        <!-- br-sideleft -->
-        <!-- ########## END: LEFT PANEL ########## -->
+        <ul class="custom-scroll">
+            <li class="active"><a href="index.html" class="waves-effect waves-primary"><i
+                        class="la la-dashboard"></i>Dashboard</a></li>
+            <li><a href="elements.html" class="waves-effect waves-primary"><i class="la la-clone"></i>Elements</a></li>
+            <!-- <li><a href="javascript:;" class="waves-effect waves-primary"><i
+                        class="la la-bullhorn"></i>Campaign</a></li> -->
+            <li class="dropdown-sub-menu">
+                <a href="javascript:;" class="waves-effect waves-primary"><i
+                            class="la la-users"></i>Customers</a>
+                <!-- <ul class="sub-menu">
+                        <li><a href="javascript:;"><i class="la la-users"></i>New Customers</a></li>
+                        <li><a href="javascript:;"><i class="la la-users"></i>Old Customers</a></li>
+                    </ul> -->
+            </li>
+            <li><a href="javascript:;" class="waves-effect waves-primary"><i
+                            class="la la-cart-arrow-down"></i>Orders</a></li>
+            <li><a href="javascript:;" class="waves-effect waves-primary"><i
+                            class="la la-wechat"></i>Messages</a></li>
+            <li><a href="javascript:;" class="waves-effect waves-primary"><i class="la la-bank"></i>Payments</a>
+            </li>
+            <li><a href="javascript:;" class="waves-effect waves-primary"><i class="la la-image"></i>Media
+                        Manager</a></li>
+            <li><a href="javascript:;" class="waves-effect waves-primary"><i class="la la-cog"></i>Settings</a>
+            </li>
+        </ul>
+    </div>
+    <!-- ########## END: LEFT PANEL ########## -->
+
+    <header class="header fixed-top d-flex align-items-center">
+
 
         <!-- ########## START: HEAD PANEL ########## -->
         <div class="br-header d-flex w-100">
+            <a id="add-menu" class="la la-navicon d-flex d-xl-none align-items-center justify-content-center"></a>
             <div class="br-header-left">
                 <form class="searchbar d-flex align-items-center pl-3">
                     <i class="la la-search"></i>
@@ -293,7 +296,7 @@
             </div>
             <div class="card">
                 <div class="card-body">
-                    <div class="row px-5 py-5">
+                    <div class="row px-3 px-xl-5 pt-3 pb-5 py-xl-5">
                         <div class="col">
                             <div class="color-box bg-primary text-center py-5">
                                 <h6 class="font-weight-bold text-white">Primary</h6>

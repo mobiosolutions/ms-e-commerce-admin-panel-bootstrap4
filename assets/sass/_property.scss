@@ -1,0 +1,17 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: $font-garphik;
+    font-size: 100%;
+    line-height: 1.3;
+    background-color: $light-color;
+    color: $theme-text-color;
+}
+
+hr {
+    margin: 14px 0;
+    border-color: lighten($primary-color, 40%);
+}

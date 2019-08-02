@@ -1,54 +1,52 @@
 header.header {
     @include box-shadow(0, 3px, 6px, 0, rgba(0, 0, 0, 0.02));
     border-bottom: 1px solid lighten($primary-color, 40%);
-    height: 91px;    
+    height: 91px;
     background: $white-color;
 }
-.br-logo {
-    min-width: 150px;
-    height: 91px;
-    z-index: 99;
-    @include box-shadow(0, 3px, 6px, 0, rgba(0, 0, 0, 0.02));
-    border: 1px solid  lighten($primary-color, 40%);
-}
-.br-header{
+
+.br-header {
     position: relative;
-    .br-header-left
-    {
+    @media screen and (min-width: $break-xl) {
+        padding-left: 150px;
+    }
+    #add-menu {
+        font-size: $font-size+10;
+        font-weight: bold;
+        padding: 10px;
+        cursor: pointer;
+    }
+    .br-header-left {
         width: $width - 50;
     }
 }
+
 .searchbar {
-    i
-    {
+    i {
         font-size: $font-size+10;
     }
-    .form-control
-    {
+    .form-control {
         height: 89px;
         background: transparent !important;
-        &:hover{
-            outline: none;           
+        &:hover {
+            outline: none;
         }
-        &:focus
-        {
+        &:focus {
             @include box-shadow(0, 0, 0, 0, transparent);
         }
     }
 }
-.br-header-right
-{
-    nav.nav
-    {
-        .dropdown
-        {
+
+.br-header-right {
+    nav.nav {
+        .dropdown {
             border-left: 1px solid lighten($primary-color, 35%);
             display: flex;
             align-items: center;
             justify-content: center;
             height: 89px;
-            
-            .dropdown-toggle, .nav-link-profile{
+            .dropdown-toggle,
+            .nav-link-profile {
                 height: 89px;
                 display: flex;
                 align-items: center;
@@ -56,39 +54,32 @@ header.header {
                 padding: 0 10px;
                 min-width: 83px;
             }
-            .dropdown-toggle
-            {
-                &::after
-                {
+            .dropdown-toggle {
+                &::after {
                     display: none;
                 }
             }
-            i
-            {
+            i {
                 font-size: $font-size+16;
                 color: $text-color;
-            }            
-            .logged-name
-            {
+            }
+            .logged-name {
                 color: $dark-blue-color;
                 font-size: $font-size+2;
                 font-weight: 600;
-                small
-                {
+                small {
                     font-size: $font-size - 2;
                     font-weight: 400;
                     color: $text-color;
                 }
             }
-            .profile-dropdown
-            {
+            .profile-dropdown {
                 font-size: $font-size+6;
                 color: $text-color;
                 display: flex;
                 align-items: center;
             }
-            .dropdown-menu-header
-            {
+            .dropdown-menu-header {
                 @include box-shadow(0, 3px, 21px, 0, rgba(0, 0, 0, 0.2));
                 left: auto !important;
                 right: -1px !important;
@@ -103,23 +94,19 @@ header.header {
                     text-transform: uppercase;
                     font-weight: 600;
                 }
-                .media-list-link
-                {
+                .media-list-link {
                     border-bottom: 1px solid #e9ecef;
                     display: flex;
-                    &:hover
-                    {
+                    &:hover {
                         background: rgba(238, 243, 254, 0.28);
                     }
                 }
-                .media-body
-                {
-                    strong, span
-                    {
+                .media-body {
+                    strong,
+                    span {
                         color: $dark-blue-color;
                     }
-                    p
-                    {
+                    p {
                         font-size: $font-size;
                         overflow: hidden;
                         text-overflow: ellipsis;
@@ -130,33 +117,28 @@ header.header {
                     }
                 }
             }
-            .dropdown-menu-user
-            {
+            .dropdown-menu-user {
                 width: 200px;
-                right: 5px !important;;
+                right: 5px !important;
+                ;
             }
-            .user-profile-nav
-            {
-                padding:0 10px;
-                li
-                {
+            .user-profile-nav {
+                padding: 0 10px;
+                li {
                     display: flex;
-                    a
-                    {
+                    a {
                         width: $width;
                         padding: 7px 8px;
                         color: $text-color;
                         @include border-radius(4px);
-                        &:hover{
+                        &:hover {
                             background: $primary-color;
                             color: $white-color;
-                            i
-                            {
+                            i {
                                 color: $white-color;
                             }
                         }
-                        i
-                        {
+                        i {
                             font-size: $font-size + 6;
                             color: $primary-color;
                             margin-right: 7px;

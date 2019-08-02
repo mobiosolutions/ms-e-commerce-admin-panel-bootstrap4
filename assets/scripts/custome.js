@@ -50,6 +50,21 @@ $(function() {
     });
     /**************** End Theme Setting **************/
 
+    /**************** Start Responsive Menu **************/
+    $(document).ready(function() {
+        $("#add-menu").click(function() {
+            $("body").addClass("open-sidebar-menu");
+            $(".br-sideleft").addClass("open-sidebar");
+            $("body").mCustomScrollbar("disable");
+        });
+        $("#remove-menu").click(function() {
+            $("body").removeClass("open-sidebar-menu");
+            $(".br-sideleft").removeClass("open-sidebar");
+            $("body").mCustomScrollbar("update");
+        });
+    });
+    /**************** End Responsive Menu **************/
+
     $(document).ready(function() {
         /**************** Tooltip **************/
         $('[data-toggle="tooltip"]').tooltip();
