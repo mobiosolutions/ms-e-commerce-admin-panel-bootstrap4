@@ -5,6 +5,9 @@
     @media screen and (min-width: $break-xl) {
         padding-left: 150px;
     }
+    @media screen and (max-width: $break-md) {
+        padding-top: 55px;
+    }
     .pagetitle {
         h4 {
             font-weight: bold;

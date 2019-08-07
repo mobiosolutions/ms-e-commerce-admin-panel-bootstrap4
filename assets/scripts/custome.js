@@ -62,6 +62,10 @@ $(function() {
             $(".br-sideleft").removeClass("open-sidebar");
             $("body").mCustomScrollbar("update");
         });
+        $(".searchbar-toggle").click(function() {
+            $("form.searchbar").toggleClass("open-searchbar");
+            $(this).toggleClass("la la-search la la-close");
+        });
     });
     /**************** End Responsive Menu **************/
 
@@ -82,7 +86,8 @@ $(function() {
         searching: false,
         info: false,
         scrollY: "400px",
-        scrollCollapse: true
+        scrollCollapse: true,
+        responsive: true
     });
     $('#datatable2 thead tr').clone(true).appendTo('#datatable2 thead');
     $('#datatable2 thead tr:eq(1) th:eq(0), #datatable2 thead tr:eq(1) th:eq(1)').each(function(i) {
@@ -106,7 +111,8 @@ $(function() {
         searching: false,
         info: false,
         scrollY: "340px",
-        scrollCollapse: true
+        scrollCollapse: true,
+        responsive: true
     });
 
     /**************** Tabs Process **************/

@@ -66,7 +66,7 @@
 
     <!-- ########## START: LEFT PANEL ########## -->
     <div class="br-sideleft">
-        <a id="remove-menu" class="la la-close"></a>
+        <a id="remove-menu" class="la la-close d-xl-none"></a>
         <div class="br-logo d-flex justify-content-center align-items-center">
             <a href="index.html"><img src="../assets/image/logo.png" alt="MS Admin Panel" width="80" /></a>
         </div>
@@ -99,12 +99,11 @@
     <!-- ########## END: LEFT PANEL ########## -->
 
     <header class="header fixed-top d-flex align-items-center">
-
-
         <!-- ########## START: HEAD PANEL ########## -->
         <div class="br-header d-flex w-100">
             <a id="add-menu" class="la la-navicon d-flex d-xl-none align-items-center justify-content-center"></a>
             <div class="br-header-left">
+                <a href="javascript:;" class="searchbar-toggle la la-search d-flex d-md-none"></a>
                 <form class="searchbar d-flex align-items-center pl-3">
                     <i class="la la-search"></i>
                     <input class="form-control border-0 pl-2" type="search" placeholder="Search...">
@@ -248,12 +247,12 @@
                     </div>
                     <!-- dropdown -->
                     <div class="dropdown">
-                        <a href="" class="nav-link-profile d-flex" data-toggle="dropdown">
+                        <a href="" class="nav-link-profile d-flex dropdown-toggle" data-toggle="dropdown" id="dropdownprofile">
                             <img src="../assets/image/img3.jpg" class="rounded" alt="" width="50">
                             <span class="logged-name px-3">Zahir Patel <br><small class="pt-3">Founder</small></span>
                             <i class="profile-dropdown la la-caret-square-o-down"></i>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-header dropdown-menu-user">
+                        <div class="dropdown-menu dropdown-menu-header dropdown-menu-user" aria-labelledby="dropdownprofile">
                             <div class="text-center">
                                 <a href=""><img src="../assets/image/img3.jpg" width="80" class="rounded-circle" alt=""></a>
                                 <h6 class="logged-fullname font-weight-bold mt-2">Zahir Patel</h6>
@@ -297,37 +296,37 @@
             <div class="card">
                 <div class="card-body">
                     <div class="row px-3 px-xl-5 pt-3 pb-5 py-xl-5">
-                        <div class="col">
+                        <div class="col-6 col-md-4 col-xl-2 mb-5 mb-xl-0">
                             <div class="color-box bg-primary text-center py-5">
                                 <h6 class="font-weight-bold text-white">Primary</h6>
                                 <span class="text-primary h6 font-weight-bold">#2863EC</span>
                             </div>
                         </div>
-                        <div class="col">
+                        <div class="col-6 col-md-4 col-xl-2 mb-5 mb-xl-0">
                             <div class="color-box bg-secondary text-center py-5">
                                 <h6 class="font-weight-bold text-white">Font</h6>
                                 <span class="text-secondary h6 font-weight-bold">#0B1630</span>
                             </div>
                         </div>
-                        <div class="col">
+                        <div class="col-6 col-md-4 col-xl-2 mb-5 mb-xl-0">
                             <div class="color-box bg-warning text-center py-5">
                                 <h6 class="font-weight-bold text-white">Accent</h6>
                                 <span class="text-warning h6 font-weight-bold">#FEAC32</span>
                             </div>
                         </div>
-                        <div class="col">
+                        <div class="col-6 col-md-4 col-xl-2">
                             <div class="color-box bg-light text-center py-5">
                                 <h6 class="font-weight-bold text-secondary">Background</h6>
                                 <span class="text-secondary h6 font-weight-bold">#EEF3FE</span>
                             </div>
                         </div>
-                        <div class="col">
+                        <div class="col-6 col-md-4 col-xl-2">
                             <div class="color-box bg-danger text-center py-5">
                                 <h6 class="font-weight-bold text-white">Negative</h6>
                                 <span class="text-danger h6 font-weight-bold">#FF4949</span>
                             </div>
                         </div>
-                        <div class="col">
+                        <div class="col-6 col-md-4 col-xl-2">
                             <div class="color-box bg-success text-center py-5">
                                 <h6 class="font-weight-bold text-white">Positive</h6>
                                 <span class="text-success h6 font-weight-bold">#13CE66</span>
@@ -343,7 +342,7 @@
                 <h4>Component</h4>
             </div>
             <div class="row">
-                <div class="col-12 col-md-6 col-lg-3">
+                <div class="col-12 col-md-6 col-lg-3 mb-5 mb-lg-0">
                     <div class="card">
                         <div class="card-body">
                             <h2 class="text-secondary font-weight-bold mb-2">227+</h2>
@@ -352,7 +351,7 @@
                         <canvas id="UploadedPhotos" style="width: 100%;height: 80px;"></canvas>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-3">
+                <div class="col-12 col-md-6 col-lg-3 mb-5 mb-lg-0">
                     <div class="card">
                         <div class="card-body">
                             <h2 class="text-secondary font-weight-bold mb-2">227+</h2>
@@ -1016,8 +1015,8 @@
                 </div>
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-12 col-md-6 col-lg-5">
-                            <div class="ms-process" id="process-tab">
+                        <div class="col-12 col-lg-5 mb-5 mb-lg-0">
+                            <div class="ms-process mb-5" id="process-tab">
                                 <ul class="nav nav-tabs process-model justify-content-center mb-3" role="tablist">
                                     <li role="presentation" class="active">
                                         <a class="active" href="#home" aria-controls="home" role="tab" data-toggle="tab">1</a>
@@ -1087,41 +1086,41 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 col-lg-6 offset-lg-1">
+                        <div class="col-12 col-lg-6 offset-lg-1">
                             <h6 class="mb-3">Default Tooltip</h6>
-                            <ul class="mb-5 d-flex justify-content-between">
-                                <li>
+                            <ul class="mb-5 row">
+                                <li class="col-6 col-lg-3">
                                     <a data-toggle="tooltip" data-placement="top" title="Tooltip Top">
 										Tooltip Top <i class="la la-info-circle"></i></a>
                                 </li>
-                                <li>
+                                <li class="col-6 col-lg-3">
                                     <a data-toggle="tooltip" data-placement="right" title="Tooltip Right">
 										Tooltip Right <i class="la la-info-circle"></i></a>
                                 </li>
-                                <li>
+                                <li class="col-6 col-lg-3">
                                     <a data-toggle="tooltip" data-placement="bottom" title="Tooltip Bottom">
 										Tooltip Bottom <i class="la la-info-circle"></i></a>
                                 </li>
-                                <li>
+                                <li class="col-6 col-lg-3">
                                     <a data-toggle="tooltip" data-placement="left" title="Tooltip Left">
 										Tooltip Left <i class="la la-info-circle"></i></a>
                                 </li>
                             </ul>
                             <h6 class="mb-3">Colorful Tooltip</h6>
-                            <ul class="mb-5 d-flex justify-content-between">
-                                <li>
+                            <ul class="mb-5 row">
+                                <li class="col-6 col-lg-3">
                                     <a data-custom-class="tooltip-primary" data-toggle="tooltip" data-placement="top" title="Tooltip Top Primary" class="text-primary">
 										Tooltip Top <i class="la la-info-circle"></i></a>
                                 </li>
-                                <li>
+                                <li class="col-6 col-lg-3">
                                     <a data-custom-class="tooltip-success" data-toggle="tooltip" data-placement="right" title="Tooltip Right Success" class="text-success">
 										Tooltip Right <i class="la la-info-circle"></i></a>
                                 </li>
-                                <li>
+                                <li class="col-6 col-lg-3">
                                     <a data-custom-class="tooltip-danger" data-toggle="tooltip" data-placement="bottom" title="Tooltip Bottom Danger" class="text-danger">
 										Tooltip Bottom <i class="la la-info-circle"></i></a>
                                 </li>
-                                <li>
+                                <li class="col-6 col-lg-3">
                                     <a data-custom-class="tooltip-warning" data-toggle="tooltip" data-placement="right" title="Tooltip Left Warning" class="text-warning">
 										Tooltip Left <i class="la la-info-circle"></i></a>
                                 </li>

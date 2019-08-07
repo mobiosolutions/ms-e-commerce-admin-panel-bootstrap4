@@ -1,4 +1,4 @@
-.theme-setting-wrapper{
+.theme-setting-wrapper {
     position: fixed;
     z-index: 52000;
     right: 0;
@@ -7,15 +7,24 @@
     width: 400px;
     height: 100%;
     background: $white-color;
-    @include transition(all, 0.5s, ease);   
-    &.open-theme-setting-wrapper{
+    @include transition(all, 0.5s, ease);
+    &.open-theme-setting-wrapper {
         @include box-shadow(0, 10px, 20px, 0, lighten($black-color, 60%));
         @include transform(translate(0, 0));
+    }
+    @media screen and (max-width: $break-md) {
+        width: 280px;
+        @include transform(translate(280px, 0));
+    }
+    h4 {
+        @media screen and (max-width: $break-md) {
+            font-size: $font-size+6;
+        }
     }
     #settings-trigger {
         position: absolute;
         top: 50%;
-        @include transform(translate(0,-50%));
+        @include transform(translate(0, -50%));
         left: 0;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
@@ -26,10 +35,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-left: -38px;        
+        margin-left: -38px;
         i {
-            font-size: $font-size + 6;;
-            line-height: 1;            
+            font-size: $font-size + 6;
+            ;
+            line-height: 1;
         }
         // &:hover i{
         //     @include animation(rotate, 0, 3s, linear, infinite);
@@ -40,14 +50,12 @@
         overflow: hidden;
     }
 }
+
 @include keyframe (rotate) {
     0% {
         @include transform(rotate(0deg));
     }
-
     100% {
         @include transform(rotate(360deg));
     }
 }
-
-

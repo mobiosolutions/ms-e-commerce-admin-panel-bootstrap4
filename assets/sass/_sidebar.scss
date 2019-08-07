@@ -7,6 +7,7 @@
     opacity: 0;
     top: 0;
     left: 0;
+    z-index: -9;
 }
 
 .open-sidebar-menu .overlay-background {
@@ -33,19 +34,20 @@
         min-width: 150px;
     }
     @media screen and (max-width: $break-xl) {
-        @include transform(translate(-160px, 0));
+        @include transform(translate(-200px, 0));
     }
     &.open-sidebar {
         @include transform(translate(0, 0));
     }
     #remove-menu {
-        position: fixed;
+        position: absolute;
         right: -20px;
         background: $white-color;
         padding: 10px;
         @include border-radius(50%);
         font-size: $font-size+10;
         font-weight: bold;
+        cursor: pointer;
     }
     ul {
         border-right: 1px solid lighten($primary-color, 40%);
@@ -96,6 +98,7 @@
                 font-size: $font-size + 2;
                 color: $dark-blue-color;
                 padding: 17px 0;
+                width: 100%;
             }
         }
     }
