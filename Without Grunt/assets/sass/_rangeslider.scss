@@ -1,0 +1,222 @@
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    primary: $primary-color,
+    success: $green-color,
+    warning: $yellow-color,
+    danger: $red-color,
+    dark-blue: $dark-blue-color,
+    light: $light-color
+  ),
+  $theme-colors
+);
+//
+$tooltip-color: #fff;
+
+//
+// Tooltip primary background color
+$tooltip-primary-bg: map-get($theme-colors, "primary") !default;
+// Tooltip success background color
+$tooltip-success-bg: map-get($theme-colors, "success") !default;
+// Tooltip warning background color
+$tooltip-warning-bg: map-get($theme-colors, "warning") !default;
+// Tooltip danger background color
+$tooltip-danger-bg: map-get($theme-colors, "danger") !default;
+// Tooltip danger background color
+$tooltip-dark-blue-bg: map-get($theme-colors, "dark-blue") !default;
+// Tooltip light background color
+$tooltip-light-bg: map-get($theme-colors, "light") !default;
+
+//== Tooltip Custom Mixin
+//
+//##
+@mixin tooltip-custom($bg-color, $color: $tooltip-color) {
+  .tooltip-arrow {
+    border-color: $bg-color;
+    @if $color != $tooltip-color {
+      color: $color;
+    }
+  }
+
+  .tooltip.top {
+    .tooltip-arrow{
+        border-top: 10px solid ;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top-color: $bg-color;
+    }    
+  }
+
+  .tooltip.right {
+    .tooltip-arrow{
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-right: 10px solid;
+        border-right-color: $bg-color;
+    }
+  }
+
+  .tooltip.left {
+    .tooltip-arrow{
+        border-top: 10px solid transparent;
+        border-left: 10px solid;
+        border-bottom: 10px solid transparent;
+        border-left-color: $bg-color;
+    }
+  }
+
+  .tooltip.bottom {
+    .tooltip-arrow{
+        border-bottom: 10px solid;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom-color: $bg-color;
+    }
+  }
+}
+
+.slider-selection {
+	background: $primary-color !important;
+}
+.slider-success {
+    @include tooltip-custom($tooltip-success-bg);
+	.slider-selection, .tooltip-inner, .slider-handle {
+		background-color: $green-color !important;
+	}
+}
+.slider-primary {
+    @include tooltip-custom($tooltip-primary-bg);
+	.slider-selection, .slider-handle, .tooltip-inner, .slider-handle {
+		background-color: $primary-color !important;
+	}
+}
+.slider-warning {
+    @include tooltip-custom($tooltip-warning-bg);
+	.slider-selection, .slider-handle, .tooltip-inner, .slider-handle {
+		background-color: $yellow-color !important;
+	}
+}
+.slider-danger {
+    @include tooltip-custom($tooltip-danger-bg);
+	.slider-selection, .slider-handle, .tooltip-inner, .slider-handle {
+		background-color: $red-color !important;
+	}
+}
+.slider.slider-horizontal {
+	width: 100% !important;
+    height: 20px;
+    
+    .slider-track
+    {
+        height: 8px;
+        background: $light-color;
+        @include box-shadow(0, 0, 0, 0, transparent);
+        @include border-radius(50px);
+    }
+    .tooltip{
+        &.in{
+            opacity: 1;
+        }
+        .tooltip-arrow {
+            bottom: -5px;
+            left: 50%;
+            position: absolute;
+            @include transform(translate(-50%,0));
+            z-index: -1;
+        }
+    }
+}
+.slider-handle {
+    background-image: none !important;
+    @include box-shadow(0, 3px, 6px, 0, lighten($black-color, 84%));       
+    @include transform(translate(0, -50%));
+    top: 50%;
+    margin-left: -15px !important;
+    width: 20px;
+    height: 30px;
+    @include border-radius(4px);
+    overflow: hidden;
+    &::after,  &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;  
+        width: 20px;
+        height: 30px;
+        @include box-shadow(inset 0, 0, 0, 5px, $light-color);   
+    }
+    &::after
+    {
+        width: 2px;
+        height: 30px;
+        left: 50%;
+        background: $light-color;
+        @include transform(translate(-50%,0));
+    }
+    &::before{
+        border: 1px solid $white-color;
+        z-index: 1;
+    }
+    &.round
+    {
+        width: 30px !important;
+        height: 30px !important;
+        &::after{            
+            width: 30px;
+            height: 30px;
+            @include border-radius(50px); 
+            background: transparent;
+        }
+        &::before{
+            width: 30px;
+            height: 30px;
+            @include border-radius(50px);   
+        }
+    }
+}
+.slider-strips {
+	.slider-selection {
+		background-image: repeating-linear-gradient(-45deg, transparent, transparent 5px, rgba(255,252,252,0.08) 5px, rgba(252,252,252,0.08) 10px) !important;
+		background-image: -ms-repeating-linear-gradient(-45deg, transparent, transparent 5px, rgba(255,252,252,0.08) 5px, rgba(252,252,252,0.08) 10px) !important;
+		background-image: -o-repeating-linear-gradient(-45deg, transparent, transparent 5px, rgba(255,252,252,0.08) 5px, rgba(252,252,252,0.08) 10px) !important;
+		background-image: -webkit-repeating-linear-gradient(-45deg, transparent, transparent 5px, rgba(255,252,252,0.08) 5px, rgba(252,252,252,0.08) 10px) !important;
+	}
+}
+
+.well {
+	background: transparent !important;
+	border: none !important;
+	@include box-shadow(0, 0, 0, 0, transparent);
+	width: 100% !important;
+	padding: 0;
+}
+.slider-ghost {
+	.slider-track {
+		height: 5px !important;
+	}
+	.slider-handle {
+		top: -2px !important;
+		border: 5px solid $primary-color;
+	}
+}
+.slider-success.slider-ghost {
+	.slider-handle {
+		border-color: $green-color;
+	}
+}
+.slider-primary.slider-ghost {
+	.slider-handle {
+		border-color: $primary-color;
+	}
+}
+.slider-warning.slider-ghost {
+	.slider-handle {
+		border-color: $yellow-color;
+	}
+}
+.slider-danger.slider-ghost {
+	.slider-handle {
+		border-color: $red-color;
+	}
+}
+

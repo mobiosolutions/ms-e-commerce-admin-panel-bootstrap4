@@ -1,0 +1,31 @@
+.border-primary
+{
+	border-color: $primary-color !important;
+}
+.border-secondary
+{
+	border-color: $dark-blue-color !important;
+}
+.border-success
+{
+	border-color: $green-color !important;
+}
+.border-danger
+{
+	border-color: $red-color !important;
+}
+.border-warning
+{
+	border-color: $yellow-color !important;
+}
+.border-light
+{
+	border-color: $light-color !important;
+}
+.border-dashed {
+    border: 1px dashed $light-color;
+}
+.border-theme
+{
+	border-color: $theme-text-color !important;
+}

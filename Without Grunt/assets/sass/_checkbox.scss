@@ -1,0 +1,92 @@
+.checkbox {
+    min-height: 25px;
+    position: relative;
+    cursor: pointer;
+    input[type="checkbox"] {
+        position: absolute;
+        top: 50%;
+        @include transform(translate(0, -50%));
+        left: 1px;
+        opacity: 0;
+        &:checked+label:before {
+            content: "\f17b";
+            background: $primary-color;
+            @include transform(translate(0, -50%));
+            @include box-shadow(0, 1px, 8px, 0, lighten($primary-color, 30%));
+            border-color: $primary-color;
+        }
+    }
+    &.checkbox-success {
+        input[type="checkbox"] {
+            &:checked+label:before {
+                background: $green-color;
+                @include box-shadow(0, 1px, 8px, 0, lighten($green-color, 30%));
+                border-color: $green-color;
+            }
+        }
+    }
+    &.checkbox-danger {
+        input[type="checkbox"] {
+            &:checked+label:before {
+                background: $red-color;
+                @include box-shadow(0, 1px, 8px, 0, lighten($red-color, 30%));
+                border-color: $red-color;
+            }
+        }
+    }
+    &.checkbox-warning {
+        input[type="checkbox"] {
+            &:checked+label:before {
+                background: $yellow-color;
+                @include box-shadow(0, 1px, 8px, 0, lighten($yellow-color, 30%));
+                border-color: $yellow-color;
+            }
+        }
+    }
+    &.checkbox-dark {
+        input[type="checkbox"] {
+            &:checked+label:before {
+                background: $dark-blue-color;
+                @include box-shadow(0, 1px, 8px, 0, lighten($dark-blue-color, 30%));
+                border-color: $dark-blue-color;
+            }
+        }
+    }
+    &.checkbox-light {
+        input[type="checkbox"] {
+            &:checked+label:before {
+                background: $light-color;
+                @include box-shadow(0, 1px, 8px, 0, lighten($light-color, 30%));
+                border-color: $light-color;
+                color: $black-color;
+            }
+        }
+    }
+    label {
+        padding-left: 28px;
+        min-height: 28px;
+        line-height: 28px;
+        font-weight: 400;
+        display: inline-block;
+        position: relative;
+        margin: 0;
+        cursor: pointer;
+        &:before {
+            content: "";
+            font: bold 12px/1 LineAwesome;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            color: $white-color;
+            justify-content: center;
+            width: 18px;
+            height: 18px;
+            border: 1px solid darken($light-color, 10%);
+            @include border-radius(4px);
+            top: 50%;
+            @include transform(translate(0, -50%));
+            left: 0;
+            @include transition(all, 0.3s, ease-in-out);
+        }
+    }
+}

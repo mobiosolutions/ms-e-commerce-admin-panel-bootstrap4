@@ -1,0 +1,75 @@
+.dataTables_scrollHeadInner {
+  width: 100% !important;
+}
+table {
+  @include border-radius(4px);
+  overflow: hidden;
+  .table-theme-bg {
+    background: lighten($primary-color, 40%) !important;
+  }
+  tr {
+    th {
+      color: $primary-color;
+      font-size: $font-size;
+      border-bottom: 1px solid lighten($primary-color, 20%) !important;
+      &.no-sorting {
+        padding-right: 12px !important;
+        &:before,
+        &::after {
+          display: none !important;
+        }
+      }
+    }
+    &:nth-of-type(odd) {
+      background-color: transparent !important;
+    }
+    &:nth-of-type(even) {
+      background-color: rgba(40, 99, 236, 0.07) !important;
+    }
+    td {
+      vertical-align: middle !important;
+      .dropdown {
+        .dropdown-menu{
+          @include transform(translate(0, 50px) !important);
+          right: 0;
+          left: auto !important;
+          &.show{
+            @include transform(translate(0, 30px) !important);
+          }
+        }        
+        .dropdown-toggle {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 30px;
+          height: 30px;
+          @include border-radius(50%);
+          font-size: $font-size + 8px;
+          color: $primary-color;
+          cursor: pointer;
+          &:hover,
+          &:focus {
+            color: $primary-color !important;
+            background: lighten($primary-color, 40%) !important;
+          }
+          &:after {
+            display: none;
+          }
+        }
+        .dropdown-item {
+          font-size: $font-size + 2;
+          color: $dark-blue-color;
+          padding: 7px 10px;
+          i {
+            margin-right: 10px;
+            font-size: $font-size + 4;
+          }
+          &:hover{
+            background: $light-color;
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}

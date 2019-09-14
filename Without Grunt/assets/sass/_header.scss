@@ -1,0 +1,229 @@
+header.header {
+    @include box-shadow(0, 3px, 6px, 0, rgba(0, 0, 0, 0.02));
+    border-bottom: 1px solid lighten($primary-color, 40%);
+    height: 91px;
+    background: $white-color;
+    z-index: 9999;
+    @media screen and (max-width: $break-md) {
+        height: 56px;
+    }
+}
+
+.br-header {
+    position: relative;
+    @media screen and (min-width: $break-xl) {
+        padding-left: 150px;
+    }
+    #add-menu {
+        font-size: $font-size + 10;
+        font-weight: bold;
+        padding: 10px 12.5px;
+        cursor: pointer;
+        @media screen and (max-width: $break-md) {
+            font-size: $font-size + 6;
+        }
+    }
+    .br-header-left {
+        width: $width - 50;
+        @media screen and (max-width: $break-lg) {
+            width: $width - 60;
+        }
+        @media screen and (max-width: $break-md) {
+            position: relative;
+            width: auto;
+            display: flex;
+            align-items: center;
+            border-left: 1px solid lighten($primary-color, 35%);
+            border-right: 1px solid lighten($primary-color, 35%);
+            padding: 0 12.5px;
+        }
+        .searchbar-toggle {
+            font-size: $font-size + 4;
+            color: $text-color;
+        }
+    }
+}
+
+.searchbar {
+    i {
+        font-size: $font-size + 10;
+        @media screen and (max-width: $break-md) {
+            background: $primary-color;
+            height: 42px;
+            min-width: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .form-control {
+        height: 89px;
+        background: transparent !important;
+        &:hover {
+            outline: none;
+        }
+        &:focus {
+            @include box-shadow(0, 0, 0, 0, transparent);
+        }
+        @media screen and (max-width: $break-md) {
+            height: auto;
+            color: $white-color;
+        }
+    }
+    @media screen and (max-width: $break-md) {
+        opacity: 0;
+        position: absolute;
+        top: 160%;
+        width: 260px;
+        background: $dark-blue-color;
+        color: $white-color;
+        padding: 0 !important;
+        overflow: hidden;
+        @include transition(all, 0.3s, ease);
+        @include border-radius(4px);
+        &.open-searchbar {
+            opacity: 1;
+            top: 110%;
+        }
+    }
+}
+
+.br-header-right {
+    nav.nav {
+        .dropdown {
+            border-left: 1px solid lighten($primary-color, 35%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 89px;
+            @media screen and (max-width: $break-md) {
+                height: 55px;
+                width: 51px;
+            }
+            .dropdown-toggle,
+            .nav-link-profile {
+                height: 89px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 10px;
+                min-width: 83px;
+                @media screen and (max-width: $break-md) {
+                    min-width: 50px;
+                    width: 50px;
+                    padding: 0;
+                    height: 60px;
+                    overflow: hidden;
+                    &.nav-link-profile {
+                        justify-content: flex-start !important;
+                        width: 35px;
+                        height: 35px;
+                        min-width: 35px;
+                        @include border-radius(4px);
+                    }
+                }
+            }
+            .dropdown-toggle {
+                &::after {
+                    display: none;
+                }
+            }
+            i {
+                font-size: $font-size + 16;
+                color: $text-color;
+                @media screen and (max-width: $break-md) {
+                    font-size: $font-size + 4;
+                }
+            }
+            .logged-name {
+                color: $dark-blue-color;
+                font-size: $font-size + 2;
+                font-weight: 600;
+                small {
+                    font-size: $font-size - 2;
+                    font-weight: 400;
+                    color: $text-color;
+                }
+            }
+            .profile-dropdown {
+                font-size: $font-size + 6;
+                color: $text-color;
+                display: flex;
+                align-items: center;
+            }
+            .dropdown-menu-header {
+                @include box-shadow(0, 3px, 21px, 0, rgba(0, 0, 0, 0.2));
+                left: auto !important;
+                right: -1px !important;
+                top: 88px !important;
+                width: 300px;
+                border: none;
+                overflow: hidden;
+                .dropdown-menu-label {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 10px;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                }
+                .media-list-link {
+                    border-bottom: 1px solid $light-color;
+                    display: flex;
+                    &:hover {
+                        background: rgba(238, 243, 254, 0.28);
+                    }
+                }
+                .media-body {
+                    strong {
+                        color: $dark-blue-color;
+                        font-weight: 400;
+                    }
+                    span {
+                        font-size: $font-size - 1;
+                        color: lighten($black-color, 40%);
+                    }
+                    p {
+                        font-size: $font-size - 1;
+                        line-height: 1.5;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        max-height: 38px;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertica;
+                        color: lighten($black-color, 40%);
+                    }
+                }
+            }
+            .dropdown-menu-user {
+                width: 200px;
+                right: 5px !important;
+            }
+            .user-profile-nav {
+                padding: 0 10px;
+                li {
+                    display: flex;
+                    a {
+                        width: $width;
+                        padding: 7px 8px;
+                        color: $text-color;
+                        @include border-radius(4px);
+                        &:hover {
+                            background: $primary-color;
+                            color: $white-color;
+                            i {
+                                color: $white-color;
+                            }
+                        }
+                        i {
+                            font-size: $font-size + 6;
+                            color: $primary-color;
+                            margin-right: 7px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

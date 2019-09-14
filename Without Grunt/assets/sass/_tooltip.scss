@@ -1,0 +1,83 @@
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    primary: $primary-color,
+    success: $green-color,
+    warning: $yellow-color,
+    danger: $red-color,
+    dark-blue: $dark-blue-color,
+    light: $light-color
+  ),
+  $theme-colors
+);
+//
+$tooltip-color: #fff;
+
+//
+// Tooltip primary background color
+$tooltip-primary-bg: map-get($theme-colors, "primary") !default;
+// Tooltip success background color
+$tooltip-success-bg: map-get($theme-colors, "success") !default;
+// Tooltip warning background color
+$tooltip-warning-bg: map-get($theme-colors, "warning") !default;
+// Tooltip danger background color
+$tooltip-danger-bg: map-get($theme-colors, "danger") !default;
+// Tooltip danger background color
+$tooltip-dark-blue-bg: map-get($theme-colors, "dark-blue") !default;
+// Tooltip light background color
+$tooltip-light-bg: map-get($theme-colors, "light") !default;
+
+//== Tooltip Custom Mixin
+//
+//##
+@mixin tooltip-custom($bg-color, $color: $tooltip-color) {
+  .tooltip-inner {
+    background-color: $bg-color;
+    @if $color != $tooltip-color {
+      color: $color;
+    }
+  }
+
+  &.bs-tooltip-top .arrow:before {
+    border-top-color: $bg-color;
+  }
+
+  &.bs-tooltip-right .arrow:before {
+    border-right-color: $bg-color;
+  }
+
+  &.bs-tooltip-left .arrow:before {
+    border-left-color: $bg-color;
+  }
+
+  &.bs-tooltip-bottom .arrow:before {
+    border-bottom-color: $bg-color;
+  }
+}
+
+//== Styles for predefined Tooltip Custom Classes
+//
+//##
+.tooltip-primary {
+  @include tooltip-custom($tooltip-primary-bg);
+}
+
+.tooltip-success {
+  @include tooltip-custom($tooltip-success-bg);
+}
+
+.tooltip-warning {
+  @include tooltip-custom($tooltip-warning-bg);
+}
+
+.tooltip-danger {
+  @include tooltip-custom($tooltip-danger-bg);
+}
+
+.tooltip-dark-blue {
+  @include tooltip-custom($tooltip-dark-blue-bg);
+}
+
+.tooltip-light {
+  @include tooltip-custom($tooltip-light-bg);
+}

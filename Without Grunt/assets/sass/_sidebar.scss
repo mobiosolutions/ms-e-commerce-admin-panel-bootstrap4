@@ -1,0 +1,106 @@
+.overlay-background {
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    @include transition(background, 0.3s, ease);
+    opacity: 0;
+    top: 0;
+    left: 0;
+    z-index: -9;
+}
+
+.open-sidebar-menu .overlay-background {
+    opacity: 1;
+    z-index: 53000;
+}
+
+.br-logo {
+    min-width: 150px;
+    height: 91px;
+    @include box-shadow(0, 3px, 6px, 0, rgba(0, 0, 0, 0.02));
+    border: 1px solid lighten($primary-color, 40%);
+}
+
+.br-sideleft {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 53000;
+    height: 100vh;
+    background: $white-color;
+    @include transition(all, 0.3s, ease);
+    @media screen and (min-width: $break-xl) {
+        min-width: 150px;
+    }
+    @media screen and (max-width: $break-xl) {
+        @include transform(translate(-200px, 0));
+    }
+    &.open-sidebar {
+        @include transform(translate(0, 0));
+    }
+    #remove-menu {
+        position: absolute;
+        right: -20px;
+        background: $white-color;
+        padding: 10px;
+        @include border-radius(50%);
+        font-size: $font-size+10;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    ul {
+        border-right: 1px solid lighten($primary-color, 40%);
+        overflow: auto;
+        height: calc(100vh - 91px);
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            &::after,
+            &::before {
+                content: "";
+                width: 0;
+                height: 2px;
+                background: $primary-color;
+                @include transition(all, 0.5s, ease);
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+            &::before {
+                width: 100%;
+                background: $light-color;
+            }
+            &:hover,
+            &.active {
+                background: lighten($primary-color, 45%);
+                border-bottom-color: $primary-color;
+                @include transition(all, 0.5s, ease);
+                i {
+                    @include text-shadow(0, 8px, 6px, rgba(0, 0, 0, 0.02));
+                }
+                a {
+                    color: $primary-color;
+                }
+                &::after {
+                    width: 100%;
+                }
+            }
+            i {
+                font-size: $font-size + 26;
+                margin-bottom: 5px;
+                display: block;
+            }
+            a {
+                font-size: $font-size + 2;
+                color: $dark-blue-color;
+                padding: 17px 0;
+                width: 100%;
+            }
+        }
+    }
+    // @include scrollbars(0, rgb(255, 255, 255));
+}
