@@ -1,0 +1,15 @@
+.login-wrapper{
+    background: url(../image/login-banner.png) no-repeat fixed 100%;
+    height: 100vh;
+    @media screen and (max-height: 400px){
+        height: 100%;
+    }     
+    overflow: auto;    
+    .login-form{
+        width: 100%;
+        @include box-shadow(0, 3px, 13px, 0, lighten($black-color, 95%));
+        @media screen and (min-width: $break-xl){
+            width: 60%;
+        } 
+    }
+}

@@ -1,0 +1,54 @@
+h1, h2, h3, h4, h5, h6{
+	color: $dark-blue-color;
+}
+
+.bg-primary{
+	background-color: $primary-color;
+}
+.bg-secondary{
+	background-color: $dark-blue-color;
+}
+.bg-success{
+	background-color: $green-color;
+}
+.bg-danger{
+	background-color: $red-color;
+}
+.bg-warning{
+	background-color: $yellow-color;
+}
+.bg-light{
+	background-color: $light-color !important;
+}
+.bg-dark{
+	background-color: $black-color;
+}
+.bg-theme{
+	background-color: $text-color;
+}
+
+.text-primary{
+	color: $primary-color;
+}
+.text-secondary{
+	color: $dark-blue-color !important;
+}
+.text-success{
+	color: $green-color;
+}
+.text-danger{
+	color: $red-color;
+}
+.text-warning{
+	color: $yellow-color;
+}
+.text-light{
+	color: $light-color;
+}
+.text-dark{
+	color: $black-color;
+}
+.text-theme
+{
+	color: $theme-text-color;
+}

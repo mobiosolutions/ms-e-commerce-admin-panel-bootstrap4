@@ -1,0 +1,56 @@
+.alert {
+    @include border-radius(4px);
+    .alert-link {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &.alert-primary {
+        color: $primary-color;
+        background-color: lighten($primary-color, 35%);
+        border-color: lighten($primary-color, 30%);
+        .alert-link {
+            color: darken($primary-color, 30%);
+        }
+    }
+    &.alert-success {
+        color: $green-color;
+        background-color: lighten($green-color, 45%);
+        border-color: lighten($green-color, 40%);
+        .alert-link {
+            color: darken($green-color, 30%);
+        }
+    }
+    &.alert-danger {
+        color: $red-color;
+        background-color: lighten($red-color, 30%);
+        border-color: lighten($red-color, 25%);
+        .alert-link {
+            color: darken($red-color, 30%);
+        }
+    }
+    &.alert-warning {
+        color: $yellow-color;
+        background-color: lighten($yellow-color, 30%);
+        border-color: lighten($yellow-color, 25%);
+        .alert-link {
+            color: darken($yellow-color, 30%);
+        }
+    }
+    &.alert-dark {
+        color: $dark-blue-color;
+        background-color: lighten($black-color, 80%);
+        border-color: lighten($black-color, 75%);
+        .alert-link {
+            color: darken($black-color, 30%);
+        }
+    }
+    &.alert-light {
+        color: darken($light-color, 20%);
+        background-color: lighten($light-color, 2%);
+        border-color: darken($light-color, 0.5%);
+        .alert-link {
+            color: darken($light-color, 30%);
+        }
+    }
+}

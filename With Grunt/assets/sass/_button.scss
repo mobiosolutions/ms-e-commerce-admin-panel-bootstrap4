@@ -1,0 +1,165 @@
+.btn {
+    border-radius: 4px;
+    padding: 10px 30px;
+    font-size: $font-size;
+    i {
+        font-size: $font-size+2;
+    }
+}
+
+.btn-sm,
+.btn-group-sm>.btn {
+    padding: 5px 10px;
+    font-size: $font-size - 1;
+    line-height: 1;
+}
+
+.btn-md,
+.btn-group-md>.btn {
+    padding: 15px 30px;
+}
+
+.btn-lg,
+.btn-group-lg>.btn {
+    padding: 20px 35px;
+}
+
+.btn-primary {
+    background: $primary-color;
+    border-color: $primary-color;
+    &:hover,
+    &:focus {
+        background: darken($primary-color, 10%);
+        border-color: darken($primary-color, 10%);
+    }
+}
+
+.btn-outline-primary {
+    border-color: $primary-color;
+    color: $primary-color;
+    &:hover {
+        background: $primary-color;
+        border-color: $primary-color;
+    }
+    &:focus {
+        border-color: $primary-color;
+    }
+}
+
+.btn-secondary {
+    background: $dark-blue-color;
+    border-color: $dark-blue-color;
+    &:hover,
+    &:focus {
+        background: darken($dark-blue-color, 10%);
+        border-color: darken($dark-blue-color, 10%);
+    }
+}
+
+.btn-outline-secondary {
+    border-color: $dark-blue-color;
+    color: $dark-blue-color;
+    &:hover {
+        background: $dark-blue-color;
+        border-color: $dark-blue-color;
+    }
+    &:focus {
+        border-color: $dark-blue-color;
+    }
+}
+
+.btn-success {
+    background: $green-color;
+    border-color: $green-color;
+    &:hover,
+    &:focus {
+        background: darken($green-color, 10%);
+        border-color: darken($green-color, 10%);
+    }
+}
+
+.btn-outline-success {
+    border-color: $green-color;
+    color: $green-color;
+    &:hover {
+        background: $green-color;
+        border-color: $green-color;
+    }
+    &:focus {
+        border-color: $green-color;
+    }
+}
+
+.btn-danger {
+    background: $red-color;
+    border-color: $red-color;
+    &:hover,
+    &:focus {
+        background: darken($red-color, 10%);
+        border-color: darken($red-color, 10%);
+    }
+}
+
+.btn-outline-danger {
+    border-color: $red-color;
+    color: $red-color;
+    &:hover {
+        background: $red-color;
+        border-color: $red-color;
+    }
+    &:focus {
+        border-color: $red-color;
+    }
+}
+
+.btn-warning {
+    background: $yellow-color;
+    border-color: $yellow-color;
+    &:hover,
+    &:focus {
+        background: darken($yellow-color, 10%);
+        border-color: darken($yellow-color, 10%);
+    }
+}
+
+.btn-outline-warning {
+    border-color: $yellow-color;
+    color: $yellow-color;
+    &:hover {
+        background: $yellow-color;
+        border-color: $yellow-color;
+    }
+    &:focus {
+        border-color: $yellow-color;
+    }
+}
+
+.btn-light {
+    background: $light-color;
+    border-color: $light-color;
+    &:hover,
+    &:focus {
+        background: darken($light-color, 10%);
+        border-color: darken($light-color, 10%);
+    }
+}
+
+.btn-outline-light {
+    border-color: $light-color;
+    color: $light-color;
+    &:hover {
+        background: $light-color;
+        border-color: $light-color;
+    }
+    &:focus {
+        border-color: $light-color;
+    }
+}
+
+.btn-link {
+    color: $primary-color;
+    &:hover,
+    &:focus {
+        color: darken($primary-color, 10%);
+    }
+}

@@ -1,0 +1,134 @@
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    primary: $primary-color,
+    success: $green-color,
+    warning: $yellow-color,
+    danger: $red-color,
+    dark-blue: $dark-blue-color,
+    light: $light-color
+  ),
+  $theme-colors
+);
+//
+$progress-color: #fff;
+
+//
+// progress primary background color
+$progress-primary-bg: map-get($theme-colors, "primary") !default;
+// progress success background color
+$progress-success-bg: map-get($theme-colors, "success") !default;
+// progress warning background color
+$progress-warning-bg: map-get($theme-colors, "warning") !default;
+// progress danger background color
+$progress-danger-bg: map-get($theme-colors, "danger") !default;
+// progress danger background color
+$progress-dark-blue-bg: map-get($theme-colors, "dark-blue") !default;
+// progress light background color
+$progress-light-bg: map-get($theme-colors, "light") !default;
+
+//== progress Custom Mixin
+//
+//##
+@mixin progress-custom($bg-color, $color: $progress-color) {
+  .progress-value {
+    background-color: $bg-color !important;        
+    @if $color != $progress-color {
+      color: $color;
+    }
+  }
+
+  .progress-value-top:after {
+    border-top: 10px solid ;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top-color: $bg-color;
+  }
+
+  .progress-value-right:after {
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid;
+    border-right-color: $bg-color;
+  }
+
+  .progress-value-left:after {
+    border-top: 10px solid transparent;
+    border-left: 10px solid;
+    border-bottom: 10px solid transparent;
+    border-left-color: $bg-color;
+  }
+
+  .progress-value-bottom:after {
+    border-bottom: 10px solid;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom-color: $bg-color;
+  }
+}
+
+//== Styles for predefined Tooltip Custom Classes
+//
+//##
+.progress-primary {
+  @include progress-custom($progress-primary-bg);
+}
+
+.progress-success {
+  @include progress-custom($progress-success-bg);
+}
+
+.progress-warning {
+  @include progress-custom($progress-warning-bg);
+}
+
+.progress-danger {
+  @include progress-custom($progress-danger-bg);
+}
+
+.progress-dark-blue {
+  @include progress-custom($progress-dark-blue-bg);
+}
+
+.progress-light {
+  @include progress-custom($progress-light-bg);
+}
+
+.progress {
+  @include border-radius(9px);
+  height: 18px;
+  overflow: visible;
+  .progress-bar {
+    @include border-radius(9px 0px 0 9px);
+    position: relative;
+    animation: animate-positive 2s;
+    height: 18px;
+  }
+  .progress-value {
+    position: absolute;
+    top: -35px;
+    right: -30px;
+    font-size: $font-size - 2;
+    color: $white-color;
+    padding: 9px 18px;
+    line-height: 1;
+    @include border-radius(4px);
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -6px;
+      left: 50%;
+      @include transform(translate(-50%, 0));
+    }
+  }
+}
+@-webkit-keyframes animate-positive {
+  0% {
+    width: 0%;
+  }
+}
+@keyframes animate-positive {
+  0% {
+    width: 0%;
+  }
+}
