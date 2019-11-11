@@ -1,0 +1,91 @@
+.form-control {
+  font-size: $font-size;
+  padding: 10px 15px;
+  height: 36px;
+  color: $dark-blue-color;
+  @include transition(all, 0.5s, ease);
+  @include border-radius(4px);
+  background: transparent;
+  border-color: transparent;
+  &.input-h-42 {
+    height: 42px;
+  }
+  &:focus {
+    background-color: #fff;
+    border-color: $primary-color !important;
+    outline: 0;
+    @include box-shadow(0, 0, 0, 0, transparent);
+  }
+  &::invalid {
+    border-color: $red-color;
+  }
+  &.bg-light:focus {
+    background: lighten($primary-color, 40%) !important;
+    border-color: $light-color !important;
+  }
+}
+.form-group {
+  margin-bottom: 20px;
+  label {
+    font-weight: 600;
+    font-size: $font-size;
+  }
+  .input-group {
+    overflow: hidden;
+    @include border-radius(4px);
+  }
+  .input-group-text {
+    color: $theme-text-color;
+    background: none;
+    border: none;
+    @include border-radius(4px);
+    font-size: $font-size + 4;
+    line-height: 1;
+  }
+  .form-control-feedback {
+    font-size: $font-size - 2;
+    position: absolute;
+    bottom: auto;
+    padding-top: 3px;
+    display: flex;
+    align-items: center;
+    i {
+      font-size: $font-size + 2;
+    }
+  }
+}
+.bootstrap-select {
+  width: $width !important;
+  .btn {
+    padding: 10px 15px;
+    &:focus {
+      @include box-shadow(0, 0, 0, 0, transparent);
+      border-color: $primary-color !important;
+      outline: none !important;
+    }
+  }
+  .dropdown-toggle::after {
+    content: "\f110";
+    font: normal normal normal 14px/1 LineAwesome;
+    border: none;
+    @include transition(all, 0.5s, ease);
+  }
+  &.show .dropdown-toggle::after {
+    @include transform(rotate(#{180}deg));
+  }
+  .dropdown-menu {
+    @include border-radius(0px 0px 4px 4px);
+    margin-top: -1px;
+    border-color: $primary-color;
+
+    li a {
+      padding: 10px 15px;
+      font-size: $font-size;
+
+      &:hover, &.active {
+        background: $light-color;
+        color: $primary-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.badge {
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    color: $white-color;
+    font-size: $font-size - 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 20%;
+    right: 25%;
+    font-weight: 400;
+    @media screen and (max-width: $break-md) {
+        top: 15%;
+        right: 20%;
+        font-size: $font-size - 4;
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.badge-primery {
+    background: $primary-color;
+}
+
+.badge-dark-blue {
+    background: $dark-blue-color;
+}
+
+.badge-accent {
+    background: $yellow-color;
+}
+
+.badge-light {
+    background-color: $light-color;
+}
+
+.badge-red {
+    background-color: $red-color;
+}
+
+.badge-green {
+    background-color: $green-color;
+}
+
+.badge-white {
+    background-color: $white-color;
+}
+
+.badge-black {
+    background-color: $black-color;
+}

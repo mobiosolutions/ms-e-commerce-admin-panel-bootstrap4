@@ -1,0 +1,24 @@
+.mainpanel {
+    padding-left: 0;
+    padding-top: 90px;
+    @include transition(all, 0.3s, ease);
+    @media screen and (min-width: $break-xl) {
+        padding-left: 150px;
+    }
+    @media screen and (max-width: $break-md) {
+        padding-top: 55px;
+    }
+    .pagetitle {
+        h4 {
+            font-weight: bold;
+            padding: 30px 0;
+            margin: 0;
+        }
+    }
+    .pagebody {
+        padding: 0 10px;
+        @media (min-width: $break-xl) {
+            padding: 0 30px;
+        }
+    }
+}

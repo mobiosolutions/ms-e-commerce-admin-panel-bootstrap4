@@ -1,0 +1,85 @@
+.radio {
+    min-height: 25px;
+    position: relative;
+    cursor: pointer;
+    input[type="radio"] {
+        position: absolute;
+        top: 50%;
+        @include transform(translate(0, -50%));
+        left: 1px;
+        opacity: 0;
+        &:checked+label:before {
+            background: $primary-color;
+            @include transform(translate(0, -50%));
+            @include box-shadow(0, 1px, 8px, 0, lighten($primary-color, 30%));
+            border-color: $primary-color;
+        }
+    }
+    &.radio-success {
+        input[type="radio"] {
+            &:checked+label:before {
+                background: $green-color;
+                @include box-shadow(0, 1px, 8px, 0, lighten($green-color, 30%));
+                border-color: $green-color;
+            }
+        }
+    }
+    &.radio-danger {
+        input[type="radio"] {
+            &:checked+label:before {
+                background: $red-color;
+                @include box-shadow(0, 1px, 8px, 0, lighten($red-color, 30%));
+                border-color: $red-color;
+            }
+        }
+    }
+    &.radio-warning {
+        input[type="radio"] {
+            &:checked+label:before {
+                background: $yellow-color;
+                @include box-shadow(0, 1px, 8px, 0, lighten($yellow-color, 30%));
+                border-color: $yellow-color;
+            }
+        }
+    }
+    &.radio-dark {
+        input[type="radio"] {
+            &:checked+label:before {
+                background: $dark-blue-color;
+                @include box-shadow(0, 1px, 8px, 0, lighten($dark-blue-color, 30%));
+                border-color: $dark-blue-color;
+            }
+        }
+    }
+    &.radio-light {
+        input[type="radio"] {
+            &:checked+label:before {
+                background: $light-color;
+                @include box-shadow(0, 1px, 8px, 0, lighten($light-color, 30%));
+                border-color: $light-color;
+            }
+        }
+    }
+    label {
+        padding-left: 22px;
+        min-height: 22px;
+        line-height: 22px;
+        display: inline-block;
+        position: relative;
+        margin: 0;
+        cursor: pointer;
+        &:before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border: 1px solid darken($light-color, 10%);
+            @include border-radius(50%);
+            top: 50%;
+            @include transform(translate(0, -50%));
+            left: 0;
+            @include transition(all, 0.3s, ease-in-out);
+        }
+    }
+}

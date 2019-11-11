@@ -1,0 +1,114 @@
+body {
+    &.theme-dark {
+        background: darken($primary-color, 47.9%);
+        color: $light-color;
+        .form-control,
+        .dropdown-menu,
+        #remove-menu {
+            background: darken($primary-color, 47.9%) !important;
+            color: $light-color;
+        }
+        .dropdown-menu-label {
+            background: $black-color !important;
+        }
+        .media-list-link,
+        .dropdown-divider {
+            border-color: darken($primary-color, 43%) !important;
+        }
+        .searchbar .form-control {
+            background: transparent !important;
+        }
+        .dropdown-item:hover {
+            background: darken($primary-color, 30%) !important;
+        }
+        .form-control.border-light,
+        .bootstrap-select .btn {
+            border-color: darken($primary-color, 43%) !important;
+            color: $white-color !important;
+        }
+        .bootstrap-select {
+            .dropdown-menu li {
+                a {
+                    &:hover,
+                    &.active {
+                        background: $primary-color;
+                    }
+                }
+            }
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .form-control,
+        .media-body strong {
+            color: $white-color !important;
+        }
+        .br-sideleft ul li a,
+        .br-sideleft ul li a {
+            color: darken($light-color, 10%);
+        }
+        .br-sideleft ul li:hover a,
+        .br-sideleft ul li.active a {
+            color: $white-color;
+        }
+        header.header,
+        .br-sideleft,
+        .br-logo,
+        .br-header-right nav.nav .dropdown,
+        .br-sideleft ul,
+        .card-header,
+        .border-dashed,
+        .br-header-left {
+            background: $black-color;
+            border-color: darken($primary-color, 43%);
+        }
+        .card {
+            background: $black-color;
+        }
+        .card h6.text-secondary {
+            color: $dark-blue-color !important;
+        }
+        .process-model li a {
+            color: $primary-color !important;
+        }
+        .process-model li a.active,
+        .process-model li.visited a,
+        .table {
+            color: $white-color !important;
+        }
+        .theme-setting-wrapper {
+            background: $black-color;
+            @include box-shadow(0, 10px, 20px, 0, darken($black-color, 60%));
+        }
+        hr {
+            border-color: darken($primary-color, 43%);
+        }
+        .logged-name {
+            color: $white-color !important;
+        }
+        .br-header-right i,
+        small {
+            color: darken($white-color, 40%) !important;
+        }
+        .badge {
+            color: $black-color;
+        }
+        .br-sideleft ul li:hover,
+        .br-sideleft ul li.active,
+        .input-group.bg-light {
+            background: $primary-color !important;
+        }
+        .form-group .input-group-text {
+            color: $white-color !important;
+        }
+        .br-sideleft ul li::before {
+            background: darken($primary-color, 43%);
+        }
+        .table-theme-bg {
+            background: darken($primary-color, 43%) !important;
+        }
+    }
+}

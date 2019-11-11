@@ -1,0 +1,28 @@
+.dropdown{
+    .dropdown-menu
+    {
+        display: block;
+        visibility: hidden;
+        opacity:0;
+        @include transform(translate(0, 30px) !important);
+        @include transition(all, 0.5s, ease);
+        @include box-shadow(0, 3px, 21px, 0, rgba(0, 0, 0, 0.2));
+        border: none;
+        &.show{
+            visibility: visible;
+            opacity:1;
+            @include transform(translate(0, 0) !important);
+        }
+    }
+    &.bootstrap-select{
+        .dropdown-menu
+        {
+            @include transform(translate(0, 0) !important);
+            top: 100% !important;
+            border: 1px solid $primary-color;     
+            ul.dropdown-menu{
+                border: none;
+            }       
+        }
+    }
+}
