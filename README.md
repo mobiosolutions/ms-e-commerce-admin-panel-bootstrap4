@@ -12,5 +12,10 @@ Download folder steps:
 - `Download ZIP` link click 
 - then after download
 
-
+Please Below link check:
+1. [Home Page](https://mobiosolutions.github.io/ms-e-commerce-admin-panel-bootstrap4/index.html)
+2. [Elements Page](https://mobiosolutions.github.io/ms-e-commerce-admin-panel-bootstrap4/elements.html)
+3. [Login Page](https://mobiosolutions.github.io/ms-e-commerce-admin-panel-bootstrap4/login.html)
+4. [Forgot Page](https://mobiosolutions.github.io/ms-e-commerce-admin-panel-bootstrap4/forgot.html)
+5. [Register Page](https://mobiosolutions.github.io/ms-e-commerce-admin-panel-bootstrap4/register.html)
 
