@@ -1,8 +1,5 @@
 # Mobio Solutions E-Commerce Admin Panel
-
-[![Latest Version on Packagist][ico-version]][link-packagist]
-[![Build Status][ico-travis]][link-travis]
-[![Total Downloads][ico-downloads]][link-downloads]
+![MS E-Commerce Admin Panel](https://cdn.dribbble.com/users/2195512/screenshots/6274667/ms_white.png)
 
 The Mobio Solutions E-Commerce Admin Panel Best new design template and easily access
 
